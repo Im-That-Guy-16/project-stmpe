@@ -1,92 +1,47 @@
 <p align="center">
-  <img src="assets/project-stmpe-logo.png" alt="Project STMPE" width="900">
+  <img src="brand/readme-banner.svg" alt="CSS and userscript package banner" width="100%">
 </p>
-
-<h1 align="center">Project STMPE</h1>
-
-<p align="center"><em>A shared styling system that brings a family of sites into one consistent visual language.</em></p>
 
 <p align="center">
-  <img alt="Project" src="https://img.shields.io/badge/Project-STMPE-111827?style=for-the-badge">
-  <img alt="CSS" src="https://img.shields.io/badge/CSS-Theme%20Packages-1572B6?style=for-the-badge&logo=css3&logoColor=white">
-  <img alt="Userscripts" src="https://img.shields.io/badge/Userscripts-Enriched%20Tools-6E40C9?style=for-the-badge">
-  <img alt="Status" src="https://img.shields.io/badge/Status-Master%20Archive-A855F7?style=for-the-badge">
-  <img alt="Licence" src="https://img.shields.io/badge/Licence-MIT-22C55E?style=for-the-badge">
+  <img alt="Type" src="https://img.shields.io/badge/Type-CSS%20%2B%20Userscript-111827?style=for-the-badge">
+  <img alt="Delivery" src="https://img.shields.io/badge/Delivery-GitHub%20Pages-181717?style=for-the-badge&logo=github&logoColor=white">
+  <img alt="Visibility" src="https://img.shields.io/badge/Visibility-Public-22C55E?style=for-the-badge&logo=github&logoColor=white">
 </p>
 
----
+# CSS & Userscript Package
 
-## Overview
+A public stylesheet and userscript package maintained for browser customization.
 
-Project STMPE is the master archive for a shared styling system. The aim is a single
-design language across a family of sites — per-site colourways, clean typography,
-modern spacing, and optional companion userscripts where deeper page enhancements
-need more than CSS.
+## Highlights
 
-Stylesheets and userscripts are published through GitHub Pages for direct
-installation.
-
-## Design direction
-
-- Shared dark-theme foundations.
-- Per-site accent colours over a common base.
-- Consistent typography and spacing.
-- Clean navigation, tables, panels, forms and metadata blocks.
-- Optional userscripts for what CSS alone cannot do.
-
-## Repository layout
-
-Every theme package uses the same stylesheet entry point:
-
-```text
-Project-STMPE.css
-```
-
-Most packages are deliberately simple — one folder, one entry-point stylesheet.
-A few carry extra local support assets, and one pairs its theme with richer
-userscript functionality and its own assets.
-
-## Userscript features
-
-- **Sonarr integration** — multi-server config, connection testing, quality profile
-  and root folder selection, colour-coded status links.
-- **Fanart.tv clear logos** on detail pages.
-- **IMDb Parents Guide** cards with severity colours, vote bars, spoiler blur, UK
-  certificate badges and caching.
-- **Homepage TMDb row** — trending, popular, top-rated, airing or on-air.
-- **Artwork placeholders** for missing posters, banners and fan art.
-- **Empty request-section hiding.**
-- **Old-season collapse** with working expand controls.
-- **Fixed trailer player** using a themed modal with a TMDb fallback lookup.
-- **TMDb cast row** with photos and character names.
-- **Actor showcase** cards with repaired images and known-for credits.
-- **Enhanced summary** with rating, status, network, run years, episode data,
-  stills and a next-episode countdown.
-- **Stamps row repositioning.**
-- **Fan-art carousel** controls for backgrounds and banners.
-- **Collapsible news blocks.**
+- Hosted stylesheet files for browser-based custom styling.
+- Userscript files with manager-friendly update metadata.
+- Public GitHub Pages delivery for direct installation links.
+- Clean GitHub-only links with no legacy host references.
 
 ## Install
 
-Use a profile stylesheet setting or a userstyle manager such as
-[Stylus](https://add0n.com/stylus.html) with the published Pages URL for the
-package you want.
+Use the GitHub repository homepage link to open the hosted package page.
 
-For the enriched userscripts, use [Tampermonkey](https://www.tampermonkey.net/) or
-[Violentmonkey](https://violentmonkey.github.io/).
+Use a userstyle manager for stylesheet files and a userscript manager such as Tampermonkey or Violentmonkey for `.user.js` files.
 
-## API keys
+## Published Assets
 
-Some enriched features need your own keys or local service details — TMDb,
-Fanart.tv or Sonarr. These live in browser storage or the script's settings panel
-and are **not** stored in this repository.
+- Stylesheets are available from the repository and GitHub Pages host.
+- Userscripts are available from the repository and GitHub Pages host.
+- The repo homepage points at the GitHub Pages deployment.
 
-## Status
+## Repository Map
 
-This is the master backup and organisation repository. Individual packages can be
-split out, published or cleaned up from here without losing the current working
-state.
+- `brand/` - project assets and source files.
+- `assets/` - project assets and source files.
 
-## Licence
+## Maintenance
 
-Released under the [MIT Licence](LICENSE).
+- Keep install and update URLs on GitHub or GitHub Pages.
+- Avoid naming target communities or private destinations in public-facing docs.
+- Check userscript metadata whenever files move.
+
+## License
+
+See [LICENSE](LICENSE) if present in this repository.
