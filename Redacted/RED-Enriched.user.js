@@ -1,13 +1,13 @@
 // ==UserScript==
 // @name         STMPE RED-Enriched
-// @namespace    https://project-stmpe-85bbe1.gitlab.io/Redacted/
+// @namespace    https://Im-That-Guy-16.github.io/project-stmpe/Redacted/
 // @version      0.1.0
 // @description  REDacted enhancements for Project STMPE. Restores a compact BBCode toolbar on quick reply/comment editors.
 // @author       Prism16
 // @match        *://redacted.sh/*
 // @match        *://www.redacted.sh/*
-// @updateURL    https://project-stmpe-85bbe1.gitlab.io/Redacted/RED-Enriched.user.js
-// @downloadURL  https://project-stmpe-85bbe1.gitlab.io/Redacted/RED-Enriched.user.js
+// @updateURL    https://Im-That-Guy-16.github.io/project-stmpe/Redacted/RED-Enriched.user.js
+// @downloadURL  https://Im-That-Guy-16.github.io/project-stmpe/Redacted/RED-Enriched.user.js
 // @grant        none
 // @run-at       document-idle
 // @noframes

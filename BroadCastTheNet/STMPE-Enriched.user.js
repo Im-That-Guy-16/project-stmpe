@@ -6,8 +6,8 @@
 // @author       Prism16
 // @match        *://broadcasthe.net/*
 // @match        *://www.broadcasthe.net/*
-// @updateURL    https://project-stmpe-85bbe1.gitlab.io/BroadCastTheNet/STMPE-Enriched.user.js
-// @downloadURL  https://project-stmpe-85bbe1.gitlab.io/BroadCastTheNet/STMPE-Enriched.user.js
+// @updateURL    https://Im-That-Guy-16.github.io/project-stmpe/BroadCastTheNet/STMPE-Enriched.user.js
+// @downloadURL  https://Im-That-Guy-16.github.io/project-stmpe/BroadCastTheNet/STMPE-Enriched.user.js
 // @grant        GM_xmlhttpRequest
 // @grant        GM_setValue
 // @grant        GM_getValue

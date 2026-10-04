@@ -11,13 +11,13 @@ Everything is modular: each feature has its own on/off switch, so you can run th
 1. Install a userscript manager — [Tampermonkey](https://www.tampermonkey.net/) (recommended) or Violentmonkey.
 2. Click the raw script link to install it:
 
-   **https://project-stmpe-85bbe1.gitlab.io/BroadCastTheNet/STMPE-Enriched.user.js**
+   **https://Im-That-Guy-16.github.io/project-stmpe/BroadCastTheNet/STMPE-Enriched.user.js**
 
 3. Your userscript manager will open an install tab — confirm the install.
 
-The script is served from GitLab Pages and carries its own update URL, so your userscript manager will pull new versions automatically.
+The script is served from GitHub Pages and carries its own update URL, so your userscript manager will pull new versions automatically.
 
-> Pairs best with the BroadCastTheNet stylesheet: `https://project-stmpe-85bbe1.gitlab.io/BroadCastTheNet/Project-STMPE.css`. The script reads the theme's colour variables, so it blends into the same look; it still renders fine on its own if the theme isn't loaded.
+> Pairs best with the BroadCastTheNet stylesheet: `https://Im-That-Guy-16.github.io/project-stmpe/BroadCastTheNet/Project-STMPE.css`. The script reads the theme's colour variables, so it blends into the same look; it still renders fine on its own if the theme isn't loaded.
 
 ---
 

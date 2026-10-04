@@ -23,7 +23,7 @@ design language across a family of sites — per-site colourways, clean typograp
 modern spacing, and optional companion userscripts where deeper page enhancements
 need more than CSS.
 
-Stylesheets and userscripts are published through GitLab Pages for direct
+Stylesheets and userscripts are published through GitHub Pages for direct
 installation.
 
 ## Design direction
