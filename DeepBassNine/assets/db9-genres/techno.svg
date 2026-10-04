@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="152" height="75" viewBox="0 0 152 75" role="img" aria-label="Techno">
+  <rect width="152" height="75" fill="#080a0f"/>
+  <path d="M20 49V20m18 29V31m18 18V14m18 35V25m18 24V18m18 31V30m18 19V21" stroke="#aeb6c6" stroke-width="3" stroke-opacity=".38"/>
+  <path d="M19 18h114M19 58h114" stroke="#fff" stroke-opacity=".11"/>
+  <text x="12" y="45" fill="#f7f8fb" font-family="Open Sans,Arial,sans-serif" font-size="15" font-weight="800" letter-spacing=".8">TECHNO</text>
+</svg>

@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <defs>
+    <linearGradient id="metal" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.52" stop-color="#f7f7f8"/>
+      <stop offset="1" stop-color="#a7a7ad"/>
+    </linearGradient>
+    <linearGradient id="charcoal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#202228"/>
+      <stop offset="0.58" stop-color="#0d0e12"/>
+      <stop offset="1" stop-color="#050507"/>
+    </linearGradient>
+    <linearGradient id="purple" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#d7c7ff"/>
+      <stop offset="0.44" stop-color="#9b6dff"/>
+      <stop offset="1" stop-color="#5b32c8"/>
+    </linearGradient>
+    <linearGradient id="softLine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#9b6dff" stop-opacity="0"/>
+      <stop offset="0.24" stop-color="#9b6dff" stop-opacity=".72"/>
+      <stop offset="0.5" stop-color="#ffffff" stop-opacity=".35"/>
+      <stop offset="0.76" stop-color="#9b6dff" stop-opacity=".72"/>
+      <stop offset="1" stop-color="#9b6dff" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="shadow" x="-35%" y="-35%" width="170%" height="180%">
+      <feDropShadow dx="0" dy="6" stdDeviation="5" flood-color="#000000" flood-opacity=".82"/>
+      <feDropShadow dx="0" dy="0" stdDeviation="4" flood-color="#9b6dff" flood-opacity=".28"/>
+    </filter>
+    <filter id="purpleGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values=".55 0 0 0 .33  0 .30 0 0 .18  0 0 1 0 .95  0 0 0 .76 0"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="200" height="200" fill="#050507" opacity="0"/>
+
+  <g opacity=".92" filter="url(#shadow)">
+    <path d="M22 59h36c8 0 12-4 18-10l15-13c7-6 15-5 22 1l14 14c7 7 11 8 20 8h31"
+          fill="none" stroke="#2b2e36" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M27 148h39c9 0 13-5 20-11l20-17c7-7 16-6 23 1l14 14c7 7 11 11 21 11h11"
+          fill="none" stroke="#3d404a" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M22 59h36c8 0 12-4 18-10l15-13c7-6 15-5 22 1l14 14c7 7 11 8 20 8h31"
+          fill="none" stroke="#9b6dff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M27 148h39c9 0 13-5 20-11l20-17c7-7 16-6 23 1l14 14c7 7 11 11 21 11h11"
+          fill="none" stroke="#c9b6ff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity=".82"/>
+  </g>
+
+  <g filter="url(#purpleGlow)">
+    <circle cx="22" cy="59" r="5.5" fill="url(#purple)"/>
+    <circle cx="178" cy="59" r="5.5" fill="url(#purple)"/>
+    <circle cx="27" cy="148" r="4.5" fill="url(#purple)"/>
+    <circle cx="175" cy="146" r="4.5" fill="#f7f7f8" opacity=".72"/>
+  </g>
+
+  <g transform="translate(44 20)" filter="url(#shadow)">
+    <path d="M14 41c8-14 19-17 33-12 8 3 19 3 27 0 14-5 25-2 33 12 7 12 13 32 8 43-4 8-14 8-22 0L79 70H33L19 84c-8 8-18 8-22 0-5-11 1-31 17-43z"
+          fill="url(#charcoal)" stroke="#6c6c73" stroke-width="4" stroke-linejoin="round"/>
+    <path d="M15 42c8-12 18-14 32-10 8 3 19 3 27 0 14-4 24-2 32 10"
+          fill="none" stroke="#c9b6ff" stroke-width="3" stroke-linecap="round" opacity=".88"/>
+    <circle cx="35" cy="56" r="10" fill="#121318" stroke="#c9b6ff" stroke-width="3"/>
+    <path d="M26 56h18M35 47v18" stroke="#f7f7f8" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="86" cy="48" r="6" fill="#d7c7ff"/>
+    <circle cx="101" cy="59" r="6" fill="#9b6dff"/>
+    <circle cx="71" cy="59" r="6" fill="#5b32c8"/>
+    <circle cx="86" cy="70" r="6" fill="#f7f7f8" opacity=".88"/>
+    <rect x="53" y="51" width="22" height="7" rx="3.5" fill="#a7a7ad" opacity=".42"/>
+    <rect x="50" y="64" width="28" height="5" rx="2.5" fill="#a7a7ad" opacity=".28"/>
+  </g>
+
+  <g filter="url(#shadow)">
+    <text x="100" y="116"
+          text-anchor="middle"
+          font-family="Helvetica, Arial, sans-serif"
+          font-size="20"
+          font-weight="800"
+          letter-spacing="1"
+          fill="url(#metal)"
+          stroke="#071019"
+          stroke-width="3"
+          paint-order="stroke fill">PROJECT</text>
+
+    <text x="100" y="159"
+          text-anchor="middle"
+          font-family="Helvetica, Arial, sans-serif"
+          font-size="54"
+          font-weight="900"
+          letter-spacing="0"
+          fill="url(#metal)"
+          stroke="#071019"
+          stroke-width="5"
+          paint-order="stroke fill">GGn</text>
+  </g>
+
+  <rect x="30" y="174" width="140" height="3" rx="1.5" fill="url(#softLine)" opacity=".95"/>
+</svg>

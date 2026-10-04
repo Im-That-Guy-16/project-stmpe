@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="152" height="75" viewBox="0 0 152 75" role="img" aria-label="House">
+  <rect width="152" height="75" fill="#080b11"/>
+  <path d="M8 50h18V29l24-17 24 17v21h70v25H8z" fill="#cfd4dd" opacity=".16"/>
+  <path d="M17 51c15-23 29-23 44 0s29 23 44 0 22-22 34-4" fill="none" stroke="#cfd4dd" stroke-width="2" stroke-opacity=".42"/>
+  <path d="M19 18h114M19 58h114" stroke="#fff" stroke-opacity=".11"/>
+  <text x="12" y="45" fill="#f7f8fb" font-family="Open Sans,Arial,sans-serif" font-size="15" font-weight="800" letter-spacing=".8">HOUSE</text>
+</svg>

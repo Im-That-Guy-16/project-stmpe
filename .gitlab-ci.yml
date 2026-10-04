@@ -1,0 +1,23 @@
+stages:
+  - deploy
+
+pages:
+  stage: deploy
+  image: alpine:latest
+  script:
+    - mkdir -p public
+    - cp -R HDBits public/HDBits
+    - cp -R GazzelleGames public/GazzelleGames
+    - cp -R Redacted public/Redacted
+    - cp -R DeepBassNine public/DeepBassNine
+    - cp -R TVVault public/TVVault
+    - cp -R BrokenStones public/BrokenStones
+    - cp -R BroadCastTheNet public/BroadCastTheNet
+    - cp -R assets public/assets
+    - cp README.md public/README.md
+    - cp pages/index.html public/index.html
+  artifacts:
+    paths:
+      - public
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH

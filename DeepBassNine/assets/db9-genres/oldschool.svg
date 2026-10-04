@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="152" height="75" viewBox="0 0 152 75" role="img" aria-label="OldSchool">
+  <rect width="152" height="75" fill="#120d09"/>
+  <circle cx="116" cy="39" r="28" fill="none" stroke="#f2bb63" stroke-width="8" stroke-opacity=".22"/>
+  <path d="M15 48h24l10-18 12 31 13-27 10 14h53" fill="none" stroke="#f2bb63" stroke-width="2" stroke-opacity=".5"/>
+  <path d="M19 18h114M19 58h114" stroke="#fff" stroke-opacity=".11"/>
+  <text x="12" y="45" fill="#f7f8fb" font-family="Open Sans,Arial,sans-serif" font-size="13" font-weight="800" letter-spacing=".7">OLDSCHOOL</text>
+</svg>

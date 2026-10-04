@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-label="BrokenStones apple mark">
+  <defs>
+    <linearGradient id="apple-lime" x1="21" y1="13" x2="74" y2="86" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#d6ffb1"/>
+      <stop offset="1" stop-color="#9adf57"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2.4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <path fill="url(#apple-lime)" filter="url(#glow)" d="M56.6 11.2c-5.9.9-10.1 4.5-12.3 9.2-1.1 2.4-1.4 4.8-.9 6.8 5.5.4 10.4-2.4 13.4-6.5 2.1-2.9 3-6.1 2.5-9.3-.8-.2-1.7-.3-2.7-.2ZM46.5 31.7c-3.4 0-6.1-1.9-9.5-3.2-3.6-1.4-7.5-1.7-11.4.5-6.7 3.8-10.3 11.7-8.7 23.2 2 14.2 11.6 31.8 21.6 32.6 3.5.3 5.4-1.8 9.1-1.9 3.8-.1 5.8 2.2 9.4 1.8 9.7-1.1 19.9-18.9 21.9-33 1.6-11-1.6-19.1-8.1-22.8-4.1-2.3-8.2-1.9-11.8-.4-4 1.7-7 3.2-12.5 3.2Z"/>
+  <path fill="#030503" fill-opacity=".82" d="M48.1 37.5c-5.4 0-9-3-13.2-4.2-3-.8-6.2-.4-9 2.3-3.3 3.3-4.5 8.8-3.3 15.8 1.9 11.3 9.5 25.4 16.3 26.1 2.6.3 4.8-1.7 8.8-1.8 4.1-.1 6.5 2.2 9 1.7 6.4-1.1 14.6-15.6 16.4-26.8 1.1-6.8-.1-12-3.4-15.1-2.8-2.7-6.2-2.9-9.3-2-4.4 1.2-7.2 4-12.3 4Z"/>
+</svg>

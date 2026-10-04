@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="152" height="75" viewBox="0 0 152 75" role="img" aria-label="Drum and Bass">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#071422"/>
+      <stop offset=".58" stop-color="#05080d"/>
+      <stop offset="1" stop-color="#2288ff" stop-opacity=".55"/>
+    </linearGradient>
+    <filter id="text-shadow" x="-20%" y="-60%" width="140%" height="220%">
+      <feDropShadow dx="0" dy="2" stdDeviation="1.4" flood-color="#000" flood-opacity=".72"/>
+    </filter>
+  </defs>
+  <rect width="152" height="75" fill="url(#bg)"/>
+  <circle cx="112" cy="38" r="34" fill="none" stroke="#2288ff" stroke-width="12" stroke-opacity=".26"/>
+  <circle cx="112" cy="38" r="19" fill="none" stroke="#2288ff" stroke-width="3" stroke-opacity=".48"/>
+  <path d="M16 51c13-31 31-31 44 0s31 31 44 0 22-31 34-4" fill="none" stroke="#2288ff" stroke-width="2" stroke-opacity=".46"/>
+  <path d="M19 18h114M19 58h114" stroke="#fff" stroke-opacity=".11"/>
+  <text x="12" y="37" fill="#f7f8fb" font-family="Open Sans,Arial,sans-serif" font-size="11" font-weight="800" letter-spacing=".6" filter="url(#text-shadow)">DRUM AND</text>
+  <text x="12" y="51" fill="#f7f8fb" font-family="Open Sans,Arial,sans-serif" font-size="11" font-weight="800" letter-spacing=".6" filter="url(#text-shadow)">BASS</text>
+</svg>

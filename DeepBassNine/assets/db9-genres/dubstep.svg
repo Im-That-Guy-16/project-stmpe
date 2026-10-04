@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="152" height="75" viewBox="0 0 152 75" role="img" aria-label="Dubstep">
+  <rect width="152" height="75" fill="#07101f"/>
+  <path d="M-8 56c20-7 29-42 48-30 15 9 14 35 31 35 19 0 17-45 38-45 15 0 20 22 47 20v39H-8z" fill="#77a8ff" opacity=".18"/>
+  <path d="M14 51c13-31 20-31 29 0s17 31 30 0 20-31 34-4 20 14 32-3" fill="none" stroke="#77a8ff" stroke-width="2" stroke-opacity=".48"/>
+  <path d="M19 18h114M19 58h114" stroke="#fff" stroke-opacity=".11"/>
+  <text x="12" y="45" fill="#f7f8fb" font-family="Open Sans,Arial,sans-serif" font-size="15" font-weight="800" letter-spacing=".8">DUBSTEP</text>
+</svg>

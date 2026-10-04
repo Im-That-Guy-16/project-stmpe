@@ -1,0 +1,2536 @@
+/*!
+ * Theme Name:     ThatBase9
+ * Version:        2.0
+ * Last Updated:   2026-07-27
+ * Based on:       DB9 static theme
+ * Source:         https://dl.dropbox.com/s/q7qp5yziar5o1ar/db9static.css
+ */
+
+@import "db9common.css";
+
+:root {
+  --tb9-bg: #0d0f14;
+  --tb9-bg-soft: #121722;
+  --tb9-surface: rgba(24, 28, 38, 0.92);
+  --tb9-surface-strong: rgba(32, 36, 48, 0.96);
+  --tb9-surface-muted: rgba(42, 42, 52, 0.68);
+  --tb9-line: rgba(255, 255, 255, 0.09);
+  --tb9-line-strong: rgba(255, 255, 255, 0.16);
+  --tb9-text: #d8dce6;
+  --tb9-text-strong: #f7f8fb;
+  --tb9-muted: #a3a9b8;
+  --tb9-accent: #d7dbe3;
+  --tb9-accent-2: #737b88;
+  --tb9-warn: #f2bb63;
+  --tb9-danger: #ee6268;
+  --tb9-success: #68c26d;
+  --tb9-shadow: 0 14px 42px rgba(0, 0, 0, 0.34);
+  --tb9-radius: 8px;
+  --tb9-logo-svg: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20460%2088%22%20role%3D%22img%22%20aria-label%3D%22DeepBassNine%22%3E%0A%3Cdefs%3E%0A%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20x2%3D%221%22%20y1%3D%220%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%239aa1ad%22%2F%3E%3Cstop%20offset%3D%22.52%22%20stop-color%3D%22%23f7f8fb%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23565d69%22%2F%3E%3C%2FlinearGradient%3E%0A%3Cfilter%20id%3D%22glow%22%20x%3D%22-10%25%22%20y%3D%22-40%25%22%20width%3D%22120%25%22%20height%3D%22180%25%22%3E%3CfeGaussianBlur%20stdDeviation%3D%221.8%22%20result%3D%22blur%22%2F%3E%3CfeMerge%3E%3CfeMergeNode%20in%3D%22blur%22%2F%3E%3CfeMergeNode%20in%3D%22SourceGraphic%22%2F%3E%3C%2FfeMerge%3E%3C%2Ffilter%3E%0A%3C%2Fdefs%3E%0A%3Crect%20x%3D%222%22%20y%3D%222%22%20width%3D%22456%22%20height%3D%2284%22%20rx%3D%2214%22%20fill%3D%22%230c0e12%22%20fill-opacity%3D%22.9%22%20stroke%3D%22%23ffffff%22%20stroke-opacity%3D%22.13%22%2F%3E%0A%3Cg%20transform%3D%22translate(25%2012)%22%20fill%3D%22none%22%20stroke%3D%22%23cbd1dc%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20filter%3D%22url(%23glow)%22%3E%0A%3Cpath%20d%3D%22M27%2024C17%209%2015%203%2020%200c9%205%2016%2014%2019%2025%22%20stroke-width%3D%225%22%2F%3E%0A%3Cpath%20d%3D%22M53%2025C56%2014%2063%205%2072%200c5%203%203%209-7%2024%22%20stroke-width%3D%225%22%2F%3E%0A%3Cpath%20d%3D%22M18%2031c-7-4-13-2-16%204%206%201%2012%204%2016%209%22%20stroke-width%3D%224%22%2F%3E%0A%3Cpath%20d%3D%22M72%2031c7-4%2013-2%2016%204-6%201-12%204-16%209%22%20stroke-width%3D%224%22%2F%3E%0A%3Cpath%20d%3D%22M22%2035c0-13%2010-22%2023-22s23%209%2023%2022v9c0%2012-9%2022-23%2022S22%2056%2022%2044z%22%20fill%3D%22%23cbd1dc%22%20stroke-width%3D%223%22%2F%3E%0A%3Cpath%20d%3D%22M36%2059l9%2013%209-13%22%20fill%3D%22%238e96a3%22%20stroke-width%3D%223%22%2F%3E%0A%3Cpath%20d%3D%22M37%2043c4%203%2012%203%2016%200%22%20stroke%3D%22%2311151b%22%20stroke-width%3D%223%22%2F%3E%0A%3Ccircle%20cx%3D%2236%22%20cy%3D%2234%22%20r%3D%222.8%22%20fill%3D%22%2311151b%22%20stroke%3D%22none%22%2F%3E%0A%3Ccircle%20cx%3D%2254%22%20cy%3D%2234%22%20r%3D%222.8%22%20fill%3D%22%2311151b%22%20stroke%3D%22none%22%2F%3E%0A%3C%2Fg%3E%0A%3Ctext%20x%3D%22128%22%20y%3D%2252%22%20font-family%3D%22Inter%2CSegoe%20UI%2CArial%2Csans-serif%22%20font-size%3D%2234%22%20font-weight%3D%22800%22%20letter-spacing%3D%221.4%22%20fill%3D%22url(%23g)%22%20filter%3D%22url(%23glow)%22%3EDeepBassNine%3C%2Ftext%3E%0A%3Ctext%20x%3D%22131%22%20y%3D%2268%22%20font-family%3D%22Inter%2CSegoe%20UI%2CArial%2Csans-serif%22%20font-size%3D%2210%22%20font-weight%3D%22700%22%20letter-spacing%3D%225%22%20fill%3D%22%23a3a9b8%22%3EDB9%20WIDESCREEN%3C%2Ftext%3E%0A%3C%2Fsvg%3E");
+}
+
+:root {
+  --tb9-logo-svg: url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%20460%2088'%20role%3D'img'%20aria-label%3D'DeepBassNine'%3E%3Cdefs%3E%3ClinearGradient%20id%3D'g'%20x1%3D'0'%20x2%3D'1'%20y1%3D'0'%20y2%3D'1'%3E%3Cstop%20offset%3D'0'%20stop-color%3D'%239aa1ad'%2F%3E%3Cstop%20offset%3D'.52'%20stop-color%3D'%23f7f8fb'%2F%3E%3Cstop%20offset%3D'1'%20stop-color%3D'%23565d69'%2F%3E%3C%2FlinearGradient%3E%3Cfilter%20id%3D'glow'%20x%3D'-10%25'%20y%3D'-40%25'%20width%3D'120%25'%20height%3D'180%25'%3E%3CfeGaussianBlur%20stdDeviation%3D'1.8'%20result%3D'blur'%2F%3E%3CfeMerge%3E%3CfeMergeNode%20in%3D'blur'%2F%3E%3CfeMergeNode%20in%3D'SourceGraphic'%2F%3E%3C%2FfeMerge%3E%3C%2Ffilter%3E%3C%2Fdefs%3E%3Crect%20x%3D'2'%20y%3D'2'%20width%3D'456'%20height%3D'84'%20rx%3D'14'%20fill%3D'%230c0e12'%20fill-opacity%3D'.9'%20stroke%3D'%23ffffff'%20stroke-opacity%3D'.13'%2F%3E%3Ctext%20x%3D'36'%20y%3D'52'%20font-family%3D'Inter%2CSegoe%20UI%2CArial%2Csans-serif'%20font-size%3D'34'%20font-weight%3D'800'%20letter-spacing%3D'1.4'%20fill%3D'url(%23g)'%20filter%3D'url(%23glow)'%3EDeepBassNine%3C%2Ftext%3E%3Ctext%20x%3D'39'%20y%3D'68'%20font-family%3D'Inter%2CSegoe%20UI%2CArial%2Csans-serif'%20font-size%3D'10'%20font-weight%3D'700'%20letter-spacing%3D'5'%20fill%3D'%23a3a9b8'%3EDB9%20WIDESCREEN%3C%2Ftext%3E%3C%2Fsvg%3E");
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  background: var(--tb9-bg);
+}
+
+body {
+  min-width: 0;
+  color: var(--tb9-text);
+  /* Page background lives on <html> so the star layers below (body::before /
+     body::after, z-index -1) are not painted over by body's own background. */
+  background: transparent;
+  font-size: 13px;
+  line-height: 1.55;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+#wrapper {
+  width: min(100% - 32px, 1840px);
+  max-width: 1840px;
+  min-width: 0;
+  margin: 0 auto;
+}
+
+#content,
+#content > .thin,
+.thin {
+  width: 100%;
+  max-width: 100%;
+}
+
+.main_column {
+  max-width: calc(100% - 304px);
+}
+
+.sidebar {
+  width: 288px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--tb9-text-strong);
+  font-weight: 650;
+  letter-spacing: 0;
+  text-shadow: none;
+}
+
+#content .header > h1,
+#content .header > h2,
+#content .header > h3,
+#content .thin > h1,
+#content .thin > h2,
+#content .thin > h3 {
+  text-align: left;
+  text-shadow: none;
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a,
+a {
+  color: var(--tb9-text-strong);
+}
+
+a {
+  text-decoration-color: transparent;
+  transition: color 160ms ease, text-decoration-color 160ms ease, background 160ms ease;
+}
+
+a:hover {
+  color: var(--tb9-accent);
+  text-decoration-color: currentColor;
+}
+
+::selection {
+  color: #fff;
+  background-color: rgba(215, 219, 227, 0.36);
+}
+
+blockquote,
+body pre {
+  width: auto !important;
+  max-width: min(100%, 980px);
+  margin: 12px auto;
+  padding: 14px 18px;
+  color: var(--tb9-text);
+  text-align: left;
+  border: 1px dashed var(--tb9-line-strong);
+  border-radius: var(--tb9-radius);
+  background: rgba(0, 0, 0, 0.2);
+}
+
+table,
+table .rowa:nth-child(even),
+table .rowb:nth-child(even) {
+  background-color: var(--tb9-surface);
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+td,
+th {
+  border-color: var(--tb9-line);
+}
+
+table .rowa,
+table .rowb {
+  border-top: 1px solid var(--tb9-line);
+}
+
+table .rowa:nth-child(odd),
+table .rowb:nth-child(odd),
+#dnulist tr:not(.colhead):not(.colhead_dark):nth-child(odd) {
+  background-color: rgba(255, 255, 255, 0.035);
+}
+
+#dnulist tr:not(.colhead):not(.colhead_dark):nth-child(even) {
+  background-color: rgba(0, 0, 0, 0.12);
+}
+
+tr:not(.colhead):not(.colhead_dark):hover,
+.torrent_table tr:not(.colhead):not(.colhead_dark):hover {
+  background-color: rgba(255, 255, 255, 0.07);
+}
+
+.colhead,
+.colhead_dark,
+tr.colheadb_dark {
+  color: var(--tb9-text-strong);
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.13), rgba(86, 93, 105, 0.18));
+}
+
+form {
+  background-color: transparent;
+}
+
+form table td.label,
+.tags a,
+.group_info > span:first-child,
+.group_torrent td:first-child > span,
+.torrent_links_block,
+#footer {
+  color: var(--tb9-muted);
+}
+
+button,
+input[type="button"],
+input[type="submit"] {
+  height: 34px;
+  color: #10131a;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 6px;
+  background: linear-gradient(180deg, #f4f5f7, #b7bdc8);
+  box-shadow: 0 8px 22px rgba(255, 255, 255, 0.08);
+  cursor: pointer;
+  transition: transform 140ms ease, box-shadow 140ms ease, background 140ms ease;
+}
+
+button:hover,
+input[type="button"]:hover,
+input[type="submit"]:hover {
+  color: #fff;
+  background: linear-gradient(180deg, #ccd2dc, #737b88);
+  box-shadow: 0 10px 28px rgba(255, 255, 255, 0.16);
+  transform: translateY(-1px);
+}
+
+input[type="email"],
+input[type="password"],
+input[type="search"],
+input[type="text"],
+select,
+textarea {
+  color: var(--tb9-text);
+  border: 1px solid var(--tb9-line);
+  border-radius: 6px;
+  background: rgba(9, 11, 16, 0.72);
+  transition: border-color 160ms ease, box-shadow 160ms ease, background 160ms ease;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="text"]:focus,
+select:focus,
+textarea:focus {
+  color: var(--tb9-text-strong);
+  border-color: rgba(215, 219, 227, 0.64);
+  background: rgba(12, 15, 22, 0.9);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.11);
+  outline: 0;
+}
+
+strong.important_text,
+.r00,
+.r01,
+.r02,
+.r03,
+.small_downvote,
+.vote_album_down,
+.vote_artist_down,
+.vote_tag_down,
+span[style*="color: red"] {
+  color: var(--tb9-danger) !important;
+}
+
+strong.important_text_alt,
+.r10,
+.r20,
+.r50,
+.r99,
+.small_upvote,
+.vote_album_up,
+.vote_artist_up,
+.vote_tag_up,
+span[style*="color: green"] {
+  color: var(--tb9-success) !important;
+}
+
+.r04,
+.r05,
+.r06,
+.r07,
+.r08,
+.r09 {
+  color: var(--tb9-warn);
+}
+
+span[style*="color: blue"] {
+  color: #9fb1c8 !important;
+}
+
+.box,
+.box2,
+.forum_post,
+.filter_torrents,
+#discog_table > div.box.center,
+#ft_container.box.pad,
+.torrent_table {
+  border: 1px solid var(--tb9-line);
+  border-radius: var(--tb9-radius);
+  background: var(--tb9-surface);
+  box-shadow: var(--tb9-shadow);
+  backdrop-filter: blur(18px);
+}
+
+.box table:not(.layout),
+.box2 table:not(.layout) {
+  border: 1px solid var(--tb9-line);
+  background: transparent;
+}
+
+.head {
+  color: var(--tb9-text-strong);
+  background: rgba(255, 255, 255, 0.04);
+  border-bottom: 1px solid var(--tb9-line);
+  text-align: left;
+  font-weight: 700;
+  text-shadow: none;
+}
+
+.autocomplete-suggestions {
+  color: #10131a;
+  background-color: #f7f8fb;
+  border-radius: 6px;
+  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.32);
+}
+
+.autocomplete-suggestions .autocomplete-suggestion.autocomplete-selected {
+  background-color: #d9dde5;
+}
+
+.autocomplete-suggestions .autocomplete-suggestion strong {
+  color: #007d87;
+}
+
+.forum_post.forum_unread {
+  border-top: 2px solid var(--tb9-accent);
+}
+
+.read {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAgMAAABinRfyAAAACVBMVEX///+QkJCQkJBzLNgEAAAAAnRSTlMAAHaTzTgAAAAtSURBVHhefYuhEQAwCMTetvv9Pl2CIfgpoSBwRORiguFKD4dMydeyqlZtrU8A6JMUKeHoG3AAAAAASUVORK5CYII=) center no-repeat;
+}
+
+.unread {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAgMAAABinRfyAAAACVBMVEX////g4ODg4ODBKPUMAAAAAnRSTlMAAHaTzTgAAAAtSURBVHhefYuhEQAwCMTetvv9Pl2CIfgpoSBwRORiguFKD4dMydeyqlZtrU8A6JMUKeHoG3AAAAAASUVORK5CYII=) center no-repeat;
+}
+
+.read_locked {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAAD1BMVEX///+QkJCQkJCQkJCQkJAi+GD7AAAABHRSTlMAAFZXqn1YHwAAADxJREFUeF6VirERACAIxBxBmYCCERhAOPefyQc8KxtT5fLfHqxgQmyAFAT7Kj2LOZ0iwiXkMeGqyiH1uWz5Fw69ZPQ3OgAAAABJRU5ErkJggg==) center no-repeat;
+}
+
+.unread_locked {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAAD1BMVEX////g4ODg4ODg4ODg4OAMRpkCAAAABHRSTlMAAFZXqn1YHwAAADxJREFUeF6VirERACAIxBxBmYCCERhAOPefyQc8KxtT5fLfHqxgQmyAFAT7Kj2LOZ0iwiXkMeGqyiH1uWz5Fw69ZPQ3OgAAAABJRU5ErkJggg==) center no-repeat;
+}
+
+.read_sticky {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAAG1BMVEWQkJD///+QkJCQkJCQkJCQkJCQkJCQkJCQkJA3mkjtAAAACHRSTlMAAFFTUl5URdDB1TQAAABISURBVHhehcahEYAwEADBY0AgE4ekDCRlUAKSEp6oKxvmJwLHqqV2lBlgeOPO4V1ZbMCbsmlkRiWDrcdzzVwxRSaAv6j6Te0es5kZ6IK/EdsAAAAASUVORK5CYII=) center no-repeat;
+}
+
+.unread_sticky {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAAG1BMVEXg4OD////g4ODg4ODg4ODg4ODg4ODg4ODg4OBQ7+XbAAAACHRSTlMAAFFTUl5URdDB1TQAAABISURBVHhehcahEYAwEADBY0AgE4ekDCRlUAKSEp6oKxvmJwLHqqV2lBlgeOPO4V1ZbMCbsmlkRiWDrcdzzVwxRSaAv6j6Te0es5kZ6IK/EdsAAAAASUVORK5CYII=) center no-repeat;
+}
+
+.read_locked_sticky {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAAIVBMVEX///+QkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJBBpNmTAAAACnRSTlMAAFZRUlNXVF5FRF9ofwAAAFxJREFUeF49zLEVgCAMBNDQWhmeNlbUdI7gGo7ACI5g5wYGu5vSkPC46r+7vNBI2FgzK3DwjZdowqeNIpyAGFbAG9at49oNjyxiEPvjqLE3OSdHrG0CpJTkaDcjPwJ6HWxMBPutAAAAAElFTkSuQmCC) center no-repeat;
+}
+
+.unread_locked_sticky {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAAIVBMVEX////g4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4OCDOE8QAAAACnRSTlMAAFZRUlNXVF5FRF9ofwAAAFxJREFUeF49zLEVgCAMBNDQWhmeNlbUdI7gGo7ACI5g5wYGu5vSkPC46r+7vNBI2FgzK3DwjZdowqeNIpyAGFbAG9at49oNjyxiEPvjqLE3OSdHrG0CpJTkaDcjPwJ6HWxMBPutAAAAAElFTkSuQmCC) center no-repeat;
+}
+
+#header {
+  position: relative;
+  z-index: 1000;
+  margin: 14px 0 16px;
+  padding: 14px;
+  border: 1px solid var(--tb9-line);
+  border-radius: 12px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.018)),
+    rgba(12, 15, 22, 0.84);
+  box-shadow: var(--tb9-shadow);
+  backdrop-filter: blur(18px);
+  overflow: visible;
+}
+
+#logo {
+  width: 338px;
+  max-width: 100%;
+  height: 66px;
+  padding: 0 0 12px;
+}
+
+#logo > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: var(--tb9-logo-svg) left center / contain no-repeat !important;
+  filter: drop-shadow(0 10px 24px rgba(0, 0, 0, 0.34));
+}
+
+#logo img {
+  display: none;
+}
+
+#header,
+#header a,
+#header input,
+#header button,
+#header select {
+  font-family: 'Open Sans', Helvetica, Arial, Tahoma, "Microsoft Yahei", sans-serif !important;
+  letter-spacing: 0;
+}
+
+#userinfo_major,
+#userinfo_stats,
+#radiobar,
+#alerts,
+#searchbars > ul input,
+#searchbars .search_form input,
+#submenu a,
+#userinfo_username a,
+#userinfo_username #nav_userinfo > a {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+#userinfo {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  left: 400px;
+  min-height: 84px;
+  z-index: 11000;
+  display: grid;
+  grid-template-columns: auto 26px auto;
+  grid-auto-rows: min-content;
+  justify-content: end;
+  align-items: center;
+  gap: 10px 12px;
+  pointer-events: none;
+}
+
+#userinfo > * {
+  pointer-events: auto;
+}
+
+#welcometext {
+  display: none !important;
+}
+
+#welcomeusername {
+  position: static !important;
+  display: inline-flex !important;
+  grid-column: 1;
+  grid-row: 1;
+  align-items: center;
+  gap: 6px;
+  width: auto !important;
+  max-width: none !important;
+  right: auto !important;
+  bottom: auto !important;
+  z-index: auto !important;
+  color: var(--tb9-text-strong);
+  font-weight: 700;
+}
+
+#welcomeusername a {
+  display: inline;
+  width: auto;
+  min-height: 0;
+  height: auto;
+  line-height: 1.4;
+  padding: 0;
+  color: var(--tb9-text-strong);
+  background: transparent;
+  border: 0;
+}
+
+#welcomeusername img {
+  height: 22px;
+  width: auto;
+  border-radius: 4px;
+  vertical-align: middle;
+}
+
+#welcomeusername::after {
+  content: "";
+  display: inline-block;
+  flex: 0 0 auto;
+  width: 18px;
+  height: 18px;
+  margin-left: 2px;
+  border-radius: 50%;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18'%3E%3Ccircle cx='9' cy='9' r='8' fill='%23090b10' stroke='%23d7dbe3' stroke-opacity='.45'/%3E%3Cpath fill='%23e14d57' d='M9 13.8S4.2 10.9 4.2 7.4C4.2 5.8 5.4 4.6 7 4.6c.9 0 1.6.5 2 1.2.4-.7 1.1-1.2 2-1.2 1.6 0 2.8 1.2 2.8 2.8 0 3.5-4.8 6.4-4.8 6.4z'/%3E%3C/svg%3E") center / contain no-repeat;
+  vertical-align: -4px;
+}
+
+#header img[src*="donor"],
+#header img[src*="heart"],
+#header img[alt*="Donor"],
+#header img[alt*="donor"],
+#header img[title*="Donor"],
+#header img[title*="donor"] {
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18'%3E%3Ccircle cx='9' cy='9' r='8' fill='%23090b10' stroke='%23d7dbe3' stroke-opacity='.45'/%3E%3Cpath fill='%23e14d57' d='M9 13.8S4.2 10.9 4.2 7.4C4.2 5.8 5.4 4.6 7 4.6c.9 0 1.6.5 2 1.2.4-.7 1.1-1.2 2-1.2 1.6 0 2.8 1.2 2.8 2.8 0 3.5-4.8 6.4-4.8 6.4z'/%3E%3C/svg%3E");
+  display: inline-block !important;
+  width: 18px !important;
+  height: 18px !important;
+  margin-left: 4px;
+  border-radius: 50%;
+  vertical-align: -4px;
+  opacity: 1;
+  filter: none !important;
+}
+
+#userinfo_major,
+#userinfo_stats {
+  position: static !important;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 4px 14px;
+  right: auto !important;
+  top: auto !important;
+  margin: 0;
+  padding: 0;
+  color: var(--tb9-muted);
+  line-height: 1.35;
+  pointer-events: auto;
+}
+
+#userinfo_major {
+  grid-column: 1 / -1;
+  min-height: 26px;
+  margin-bottom: 0;
+}
+
+#userinfo_stats {
+  grid-column: 1 / -1;
+  justify-self: end;
+  flex: initial;
+  min-height: 24px;
+}
+
+#userinfo_major > li,
+#userinfo_stats > li,
+#donation_wrap li {
+  margin: 0 !important;
+  white-space: nowrap;
+}
+
+#donation_bar_text {
+  position: absolute !important;
+  display: inline-flex !important;
+  align-items: center;
+  top: 52px !important;
+  right: 18px !important;
+  z-index: 11002;
+  line-height: 1.35 !important;
+  color: var(--tb9-muted);
+  font-size: 13px;
+  font-weight: 700;
+  pointer-events: auto;
+}
+
+#donation_bar_text > a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 0;
+  padding: 0 4px;
+  line-height: 1.35 !important;
+  border-radius: 4px;
+}
+
+#radiobar {
+  top: 9px;
+  left: 50%;
+  width: auto;
+  margin: 0;
+  transform: translateX(-50%);
+  z-index: 11001;
+}
+
+#alerts {
+  top: 18px;
+  right: 360px;
+  left: 360px;
+  z-index: 11001;
+}
+
+#menu {
+  position: relative;
+  z-index: 1010;
+  display: grid;
+  grid-template-columns: repeat(10, minmax(0, 1fr));
+  gap: 1px;
+  margin-top: 22px;
+  padding: 3px;
+  border-radius: 10px 10px 0 0;
+  overflow: visible;
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.11), rgba(88, 94, 106, 0.14)),
+    rgba(13, 16, 23, 0.92);
+  border: 1px solid var(--tb9-line);
+  border-bottom: 0;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  clear: both;
+}
+
+#menu > ul {
+  display: contents !important;
+  gap: 0;
+  padding: 0;
+  width: auto !important;
+  overflow: visible;
+}
+
+#menu li,
+#menu li:nth-child(n) {
+  min-width: 0;
+  background-color: transparent;
+}
+
+#menu > ul a {
+  min-height: 42px;
+  line-height: 42px;
+  color: var(--tb9-muted);
+  border-radius: 7px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0;
+}
+
+#menu > ul a:hover {
+  box-shadow: inset 0 0 0 1px rgba(215, 219, 227, 0.2);
+}
+
+#nav_donate,
+#nav_staff {
+  position: static !important;
+  top: auto !important;
+  right: auto !important;
+  z-index: 13001 !important;
+  width: auto !important;
+  min-width: 0;
+  height: auto;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  list-style: none;
+}
+
+#nav_donate {
+  right: auto !important;
+  width: auto;
+}
+
+#nav_staff {
+  right: auto !important;
+  width: auto;
+}
+
+#nav_donate > a,
+#nav_staff > a {
+  display: block !important;
+  width: 100% !important;
+  height: 42px;
+  min-height: 42px;
+  padding: 0 !important;
+  color: var(--tb9-muted) !important;
+  background: transparent !important;
+  border: 0;
+  border-radius: 7px;
+  box-shadow: none !important;
+  font-family: 'Open Sans', Helvetica, Arial, Tahoma, "Microsoft Yahei", sans-serif !important;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 42px !important;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#nav_donate > a:hover,
+#nav_staff > a:hover {
+  color: var(--tb9-text-strong) !important;
+  background: rgba(255, 255, 255, 0.13) !important;
+}
+
+#menu > ul a:hover,
+#submenu:hover a:hover,
+#userinfo_username:hover a:hover,
+#welcomeusername a:hover {
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.13);
+}
+
+.linkbox > strong,
+.alertbar,
+#userform #settings_sections h2 a:hover {
+  color: var(--tb9-accent) !important;
+}
+
+#searchbars > ul {
+  min-height: 54px;
+  padding: 8px 10px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0.008)),
+    rgba(7, 10, 16, 0.88);
+  border: 1px solid var(--tb9-line);
+  border-top: 0;
+  border-radius: 0 0 10px 10px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.035);
+}
+
+#searchbars > ul input,
+#searchbars .search_form input {
+  height: 34px;
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  border-radius: 999px;
+  background-color: rgba(4, 6, 10, 0.68);
+  text-align: center;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+#searchbars .search_form input:focus {
+  background: rgba(4, 6, 10, 0.82);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.1);
+}
+
+#searchbars {
+  position: relative;
+  z-index: 1000;
+}
+
+/* User nav links (Edit / NextClass / Invite / Logout) shown inline in the
+   top-right, next to the username. The original theme expected a
+   #submenu / #nav_userinfo dropdown that this site's markup does not have. */
+ul#userinfo_username {
+  position: static !important;
+  display: inline-flex !important;
+  grid-column: 3;
+  grid-row: 1;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 3px 10px;
+  width: auto !important;
+  max-width: none !important;
+  right: auto !important;
+  bottom: auto !important;
+  z-index: auto !important;
+  margin: 0;
+  padding: 0;
+  background: transparent !important;
+  overflow: visible;
+  pointer-events: auto;
+}
+
+#userinfo_username li {
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  white-space: nowrap;
+  list-style: none;
+}
+
+#userinfo_username a,
+#userinfo_username #nav_userinfo > a {
+  display: inline !important;
+  width: auto !important;
+  min-height: 0 !important;
+  line-height: 1.4 !important;
+  padding: 0 !important;
+  color: var(--tb9-muted) !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  text-align: left !important;
+}
+
+#userinfo_username a:hover {
+  color: var(--tb9-text-strong) !important;
+  background: transparent !important;
+}
+
+/* Personal sub-menu (Inbox / Notifications / Bookmarks / Friends ...): a
+   caret beside the username that expands to a dropdown on hover. */
+#submenu {
+  position: absolute !important;
+  right: 344px !important;
+  top: 24px !important;
+  z-index: 13000 !important;
+  width: 26px !important;
+  height: 26px;
+  margin-top: 0 !important;
+  overflow: visible;
+  pointer-events: auto;
+}
+
+#submenu::before {
+  display: block;
+  content: "";
+  width: 26px !important;
+  height: 26px !important;
+  line-height: 26px !important;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath fill='%23a3a9b8' d='M5.4 7.6h9.2L10 12.4z'/%3E%3C/svg%3E") center / 18px 18px no-repeat transparent !important;
+  border: 0;
+  border-radius: 5px;
+}
+
+#submenu:hover {
+  z-index: 13003 !important;
+  width: 188px !important;
+  overflow: visible;
+  backdrop-filter: blur(14px);
+}
+
+#submenu:hover::before {
+  margin-left: 162px;
+  background-color: rgba(255, 255, 255, 0.13) !important;
+}
+
+#submenu a {
+  display: none !important;
+  width: 188px !important;
+  min-height: 32px;
+  line-height: 32px !important;
+  padding: 0 14px !important;
+  color: var(--tb9-muted);
+  background: rgba(10, 12, 18, 0.98);
+  border: 0;
+  border-left: 1px solid var(--tb9-line);
+  border-right: 1px solid var(--tb9-line);
+  box-shadow: none;
+  text-align: left;
+}
+
+#submenu li {
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none;
+}
+
+#submenu:hover a {
+  display: block !important;
+}
+
+#submenu:hover a:first-of-type {
+  margin-top: 0;
+  border-top: 1px solid var(--tb9-line);
+  border-radius: 8px 8px 0 0;
+  box-shadow: 0 18px 34px rgba(0, 0, 0, 0.36);
+}
+
+#submenu:hover a:last-of-type {
+  border-bottom: 1px solid var(--tb9-line);
+  border-radius: 0 0 8px 8px;
+}
+
+#submenu a:hover {
+  color: var(--tb9-text-strong);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+#content {
+  position: relative;
+  z-index: 1;
+}
+
+#noty_bottomRight_layout_container > li {
+  border: 1px solid var(--tb9-line-strong) !important;
+  border-radius: var(--tb9-radius) !important;
+}
+
+#noty_bottomRight_layout_container .noty_message {
+  color: #10131a !important;
+  background-color: #f7f8fb !important;
+}
+
+#noty_bottomRight_layout_container .noty_buttons {
+  background-color: var(--tb9-surface-strong) !important;
+}
+
+#noty_bottomRight_layout_container .noty_buttons a {
+  color: var(--tb9-text-strong) !important;
+}
+
+#noty_bottomRight_layout_container .noty_buttons a:hover {
+  color: var(--tb9-accent) !important;
+}
+
+.torrent_table {
+  overflow: hidden;
+}
+
+.torrent_table tr:not(.colhead):not(.colhead_dark) {
+  border-top: 1px solid var(--tb9-line);
+}
+
+.torrent_table .group {
+  background-color: rgba(255, 255, 255, 0.035);
+}
+
+.group_torrent {
+  background-color: rgba(0, 0, 0, 0.14);
+}
+
+.group_torrent.edition,
+.torrent {
+  background-color: rgba(255, 255, 255, 0.045);
+}
+
+.torrent_table img:is(
+  [src*="caticon" i],
+  [src*="category" i],
+  [src*="genre" i],
+  [src*="jungle" i],
+  [src*="break" i],
+  [src*="dnb" i],
+  [src*="drum" i][src*="bass" i],
+  [src*="house" i],
+  [src*="dubstep" i],
+  [src*="oldschool" i],
+  [src*="old-school" i],
+  [src*="oldskool" i],
+  [src*="techno" i],
+  [src*="garage" i],
+  [alt*="jungle" i],
+  [alt*="break" i],
+  [alt*="dnb" i],
+  [alt*="drum" i][alt*="bass" i],
+  [alt*="house" i],
+  [alt*="dubstep" i],
+  [alt*="oldschool" i],
+  [alt*="old school" i],
+  [alt*="oldskool" i],
+  [alt*="techno" i],
+  [alt*="garage" i],
+  [title*="jungle" i],
+  [title*="break" i],
+  [title*="dnb" i],
+  [title*="drum" i][title*="bass" i],
+  [title*="house" i],
+  [title*="dubstep" i],
+  [title*="oldschool" i],
+  [title*="old school" i],
+  [title*="oldskool" i],
+  [title*="techno" i],
+  [title*="garage" i],
+  [width="152"],
+  [height="75"]
+),
+.torrent_table tr:has(a[href*="jungle" i]) td:nth-child(2) img,
+.torrent_table tr:has(a[href*="break" i]) td:nth-child(2) img,
+.torrent_table tr:has(a[href*="dnb" i]) td:nth-child(2) img,
+.torrent_table tr:has(a[href*="drum" i][href*="bass" i]) td:nth-child(2) img,
+.torrent_table tr:has(a[href*="house" i]) td:nth-child(2) img,
+.torrent_table tr:has(a[href*="dubstep" i]) td:nth-child(2) img,
+.torrent_table tr:has(a[href*="oldschool" i]) td:nth-child(2) img,
+.torrent_table tr:has(a[href*="old-school" i]) td:nth-child(2) img,
+.torrent_table tr:has(a[href*="old%20school" i]) td:nth-child(2) img,
+.torrent_table tr:has(a[href*="old+school" i]) td:nth-child(2) img,
+.torrent_table tr:has(a[href*="oldskool" i]) td:nth-child(2) img,
+.torrent_table tr:has(a[href*="techno" i]) td:nth-child(2) img,
+.torrent_table tr:has(a[href*="garage" i]) td:nth-child(2) img {
+  display: block !important;
+  width: 104px !important;
+  height: 51px !important;
+  max-width: 104px !important;
+  object-fit: cover;
+}
+
+.torrent_table img:is([src*="jungle" i], [alt*="jungle" i], [title*="jungle" i]),
+.torrent_table tr:has(a[href*="jungle" i]) td:nth-child(2) img {
+  content: url("assets/db9-genres/jungle.svg");
+}
+
+.torrent_table img:is([src*="break" i], [alt*="break" i], [title*="break" i]),
+.torrent_table tr:has(a[href*="break" i]) td:nth-child(2) img {
+  content: url("assets/db9-genres/breaks.svg");
+}
+
+.torrent_table img:is([src*="dnb" i], [alt*="dnb" i], [title*="dnb" i], [src*="drum" i][src*="bass" i], [alt*="drum" i][alt*="bass" i], [title*="drum" i][title*="bass" i]),
+.torrent_table tr:has(a[href*="dnb" i]) td:nth-child(2) img,
+.torrent_table tr:has(a[href*="drum" i][href*="bass" i]) td:nth-child(2) img {
+  content: url("assets/db9-genres/drum-and-bass.svg");
+}
+
+.torrent_table img:is([src*="house" i], [alt*="house" i], [title*="house" i]),
+.torrent_table tr:has(a[href*="house" i]) td:nth-child(2) img {
+  content: url("assets/db9-genres/house.svg");
+}
+
+.torrent_table img:is([src*="dubstep" i], [alt*="dubstep" i], [title*="dubstep" i]),
+.torrent_table tr:has(a[href*="dubstep" i]) td:nth-child(2) img {
+  content: url("assets/db9-genres/dubstep.svg");
+}
+
+.torrent_table img:is([src*="oldschool" i], [src*="old-school" i], [src*="oldskool" i], [alt*="oldschool" i], [alt*="old school" i], [alt*="oldskool" i], [title*="oldschool" i], [title*="old school" i], [title*="oldskool" i]),
+.torrent_table tr:has(a[href*="oldschool" i]) td:nth-child(2) img,
+.torrent_table tr:has(a[href*="old-school" i]) td:nth-child(2) img,
+.torrent_table tr:has(a[href*="old%20school" i]) td:nth-child(2) img,
+.torrent_table tr:has(a[href*="old+school" i]) td:nth-child(2) img,
+.torrent_table tr:has(a[href*="oldskool" i]) td:nth-child(2) img {
+  content: url("assets/db9-genres/oldschool.svg");
+}
+
+.torrent_table img:is([src*="techno" i], [alt*="techno" i], [title*="techno" i]),
+.torrent_table tr:has(a[href*="techno" i]) td:nth-child(2) img {
+  content: url("assets/db9-genres/techno.svg");
+}
+
+.torrent_table img:is([src*="garage" i], [alt*="garage" i], [title*="garage" i]),
+.torrent_table tr:has(a[href*="garage" i]) td:nth-child(2) img {
+  content: url("assets/db9-genres/uk-garage.svg");
+}
+
+.torrent_table td:nth-child(2):has(img) {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  font-size: 0 !important;
+  line-height: 0 !important;
+}
+
+.torrent_table td:nth-child(2):has(img) a {
+  display: inline-block;
+  line-height: 0 !important;
+}
+
+.tags a:hover {
+  color: var(--tb9-accent);
+}
+
+.cats_applications,
+.cats_audiobooks,
+.cats_comedy,
+.cats_comics,
+.cats_ebooks,
+.cats_elearningvideos {
+  border-right: 2px solid rgba(16, 19, 26, 0.8);
+}
+
+.tooltipster-default {
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 6px;
+  background-color: #f7f8fb;
+}
+
+.tooltipster-default .tooltipster-content,
+.tooltipster-default .tooltipster-content a,
+#musicbrainz_popup,
+#musicbrainz_popup a {
+  color: #10131a;
+}
+
+.tooltipster-default .tooltipster-content a:hover,
+#musicbrainz_popup a:hover {
+  color: #4b5563;
+}
+
+#userform #settings_sections h2 a,
+.rule_short {
+  color: var(--tb9-text-strong);
+}
+
+.poll .graph {
+  background-color: rgba(255, 255, 255, 0.09);
+}
+
+.poll .graph span {
+  background: linear-gradient(90deg, var(--tb9-accent-2), var(--tb9-accent));
+}
+
+td.avatar {
+  border: 1px solid var(--tb9-line);
+  border-radius: var(--tb9-radius);
+}
+
+span#newtorrentnumber {
+  animation: tb9-glow 2.2s ease-in-out infinite alternate;
+}
+
+@keyframes tb9-glow {
+  from {
+    color: #fff;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.56), 0 0 14px rgba(170, 176, 187, 0.34);
+  }
+
+  to {
+    color: #fff;
+    text-shadow: 0 0 7px rgba(215, 219, 227, 0.7), 0 0 18px rgba(86, 93, 105, 0.46);
+  }
+}
+
+@media (min-width: 1900px) {
+  #wrapper {
+    width: min(100% - 48px, 1840px);
+    max-width: 1840px;
+  }
+
+  .main_column {
+    max-width: calc(100% - 332px);
+  }
+
+  .sidebar {
+    width: 316px;
+  }
+}
+
+@media (max-width: 980px) {
+  body {
+    margin: 0;
+  }
+
+  #wrapper {
+    width: min(100% - 18px, 100%);
+  }
+
+  #header {
+    margin-top: 9px;
+    padding: 10px 10px 0;
+  }
+
+  #logo {
+    width: 300px;
+    height: 58px;
+    padding-bottom: 9px;
+  }
+
+  .main_column,
+  .sidebar {
+    float: none;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  #menu > ul,
+  #searchbars > ul,
+  .thin > .header {
+    flex-wrap: wrap;
+  }
+
+  #donation_bar_text {
+    position: static !important;
+    justify-content: flex-end;
+    margin: 6px 0;
+  }
+
+  #menu {
+    display: block;
+    margin-top: 8px;
+    padding: 0;
+  }
+
+  #menu > ul {
+    display: flex !important;
+    gap: 1px;
+    padding: 3px;
+    width: 100% !important;
+  }
+
+  #nav_donate,
+  #nav_staff,
+  #submenu {
+    position: static !important;
+    width: auto !important;
+  }
+
+  #menu > ul a {
+    min-height: 36px;
+    line-height: 36px;
+    font-size: 11px;
+  }
+
+  #searchbars > ul {
+    height: auto;
+    gap: 6px;
+    padding: 8px;
+  }
+
+  #searchbars > ul li {
+    flex: 1 1 180px;
+    margin-right: 0;
+  }
+}
+
+/* ==========================================================================
+   DB9 STMPE OLED header pass: black shell with restrained cyan hints
+   ========================================================================== */
+
+:root {
+  --tb9-oled: #000000;
+  --tb9-oled-1: #050708;
+  --tb9-oled-2: #090d0f;
+  --tb9-panel-oled: rgba(3, 6, 7, 0.96);
+  --tb9-panel-oled-strong: rgba(6, 10, 12, 0.98);
+  --tb9-cyan: #45dff0;
+  --tb9-cyan-bright: #b9f8ff;
+  --tb9-cyan-deep: #168495;
+  --tb9-cyan-soft: rgba(69, 223, 240, 0.07);
+  --tb9-cyan-line: rgba(185, 248, 255, 0.22);
+  --tb9-cyan-glow: 0 0 18px rgba(69, 223, 240, 0.12);
+}
+
+html {
+  background:
+    radial-gradient(circle at 50% 0%, rgba(69, 223, 240, 0.035), transparent 430px),
+    linear-gradient(180deg, #050708 0%, #000000 540px, #000000 100%) fixed,
+    #000000;
+}
+
+#header {
+  position: relative;
+  z-index: 1000;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  max-width: none;
+  min-height: 132px;
+  margin: 0 auto 18px;
+  padding: 14px 0 0;
+  overflow: visible;
+  background:
+    radial-gradient(circle at 18% 0%, rgba(69, 223, 240, 0.05), transparent 310px),
+    linear-gradient(180deg, rgba(3, 6, 7, 0.98), rgba(0, 0, 0, 0.96));
+  border: 1px solid rgba(185, 248, 255, 0.10);
+  border-radius: 14px;
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.36);
+  backdrop-filter: none;
+}
+
+#header::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -1px;
+  left: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(185, 248, 255, 0.28), transparent);
+}
+
+#logo {
+  position: absolute;
+  top: 14px;
+  left: 18px;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  width: auto;
+  max-width: none;
+  height: auto;
+  min-height: 46px;
+  margin: 0;
+  padding: 0;
+}
+
+#logo::before {
+  content: "";
+  display: inline-flex;
+  width: 42px;
+  height: 42px;
+  margin-right: 11px;
+  background:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 96'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='18' y1='12' x2='78' y2='84' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23b9f8ff'/%3E%3Cstop offset='1' stop-color='%23168495'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='48' cy='48' r='37' fill='%23040607' stroke='url(%23g)' stroke-width='5'/%3E%3Ccircle cx='48' cy='48' r='19' fill='none' stroke='%2345dff0' stroke-opacity='.82' stroke-width='5'/%3E%3Ccircle cx='48' cy='48' r='6' fill='%23b9f8ff'/%3E%3Cpath d='M18 49h10m40 0h10M48 18v10m0 40v10' stroke='%23b9f8ff' stroke-opacity='.58' stroke-linecap='round' stroke-width='4'/%3E%3C/svg%3E") center / contain no-repeat;
+  filter: drop-shadow(0 0 10px rgba(69, 223, 240, 0.20));
+}
+
+#logo > a {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  width: auto;
+  height: auto;
+  min-height: 42px;
+  background: none !important;
+  filter: none;
+  line-height: 1;
+}
+
+#logo > a::before {
+  content: "DEEPBASSNINE";
+  color: var(--tb9-text-strong);
+  font-family: "Open Sans", Helvetica, Arial, Tahoma, sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+#logo > a::after {
+  content: "MUSIC / PRIVATE TRACKER";
+  margin-top: 4px;
+  color: var(--tb9-muted);
+  font-family: "Open Sans", Helvetica, Arial, Tahoma, sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.15em;
+  white-space: nowrap;
+}
+
+#userinfo {
+  position: relative;
+  top: auto;
+  right: auto;
+  left: auto;
+  order: 1;
+  display: flex;
+  flex: 0 0 100%;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 2px 4px;
+  min-height: 34px;
+  margin: 0;
+  padding: 0 18px 0 306px;
+  pointer-events: none;
+}
+
+#userinfo > * {
+  pointer-events: auto;
+}
+
+#welcomeusername,
+ul#userinfo_username,
+#userinfo_major,
+#userinfo_stats {
+  position: static !important;
+  display: inline-flex !important;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 3px 9px;
+  width: auto !important;
+  max-width: none !important;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+}
+
+#userinfo li,
+#userinfo_major > li,
+#userinfo_stats > li {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  margin: 0 !important;
+  padding: 4px 7px !important;
+  border-radius: 9px;
+  background: transparent !important;
+  white-space: nowrap;
+}
+
+#userinfo li:hover,
+#welcomeusername:hover {
+  background: var(--tb9-cyan-soft) !important;
+}
+
+#userinfo a,
+#userinfo_username a,
+#welcomeusername a,
+#userinfo .stat {
+  color: var(--tb9-text-strong) !important;
+  font-weight: 700;
+}
+
+#welcomeusername::after {
+  border: 1px solid rgba(185, 248, 255, 0.28);
+  background:
+    radial-gradient(circle at 50% 45%, #b9f8ff 0 22%, transparent 23%),
+    radial-gradient(circle, rgba(69, 223, 240, 0.20), rgba(0, 0, 0, 0.72));
+  box-shadow: 0 0 10px rgba(69, 223, 240, 0.12);
+}
+
+#donation_bar_text {
+  top: 48px !important;
+  right: 18px !important;
+  color: var(--tb9-muted);
+}
+
+#radiobar {
+  top: 11px;
+  color: var(--tb9-muted);
+}
+
+#alerts {
+  top: 66px;
+  right: 18px;
+  left: auto;
+  max-width: min(360px, calc(100vw - 40px));
+  color: var(--tb9-cyan-bright);
+}
+
+#submenu {
+  top: 14px !important;
+  right: 18px !important;
+}
+
+#menu {
+  order: 2;
+  display: block;
+  flex: 0 0 100%;
+  width: 100%;
+  max-width: none;
+  min-height: 48px;
+  margin: 28px 0 0;
+  padding: 5px;
+  clear: none;
+  overflow: visible;
+  background:
+    linear-gradient(180deg, rgba(10, 16, 18, 0.88), rgba(0, 0, 0, 0.96));
+  border: 1px solid rgba(185, 248, 255, 0.14);
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.44);
+}
+
+#menu > ul {
+  display: flex !important;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 6px;
+  width: 100% !important;
+  margin: 0;
+  padding: 0;
+}
+
+#menu li,
+#menu li:nth-child(n),
+#nav_donate,
+#nav_staff {
+  position: static !important;
+  display: block;
+  min-width: 0;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+#menu > ul a,
+#nav_donate > a,
+#nav_staff > a {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  min-height: 36px;
+  height: auto;
+  padding: 8px 16px !important;
+  color: var(--tb9-text) !important;
+  background: transparent !important;
+  border: 0;
+  border-radius: 10px;
+  box-shadow: none !important;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1 !important;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#menu > ul a:hover,
+#nav_donate > a:hover,
+#nav_staff > a:hover {
+  color: var(--tb9-cyan-bright) !important;
+  background: var(--tb9-cyan-soft) !important;
+  box-shadow: inset 0 0 0 1px var(--tb9-cyan-line) !important;
+}
+
+#searchbars {
+  order: 3;
+  flex: 0 0 100%;
+  width: 100%;
+  margin: 0;
+  padding: 12px 0 14px;
+}
+
+#searchbars > ul {
+  display: flex !important;
+  flex-wrap: wrap;
+  min-height: 0;
+  max-width: none;
+  margin: 0 auto;
+  padding: 0;
+  gap: 12px;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+#searchbars > ul li {
+  flex: 1 1 190px;
+  margin: 0;
+  padding: 0;
+}
+
+#searchbars > ul input,
+#searchbars .search_form input {
+  width: 100%;
+  height: 34px;
+  color: var(--tb9-text);
+  border: 1px solid rgba(185, 248, 255, 0.16);
+  border-radius: 10px;
+  background: #030506;
+  box-shadow: none;
+}
+
+#searchbars .search_form input:focus {
+  border-color: var(--tb9-cyan-line);
+  background: #05090a;
+  box-shadow: 0 0 0 2px rgba(69, 223, 240, 0.12);
+}
+
+@media (max-width: 980px) {
+  #header {
+    min-height: 0;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 16px 14px 0;
+  }
+
+  #logo {
+    position: static;
+    flex: 0 0 100%;
+    margin-bottom: 12px;
+  }
+
+  #userinfo {
+    justify-content: flex-start;
+    padding-left: 0;
+  }
+
+  #menu {
+    margin-top: 14px;
+  }
+
+  #menu > ul {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  #menu > ul::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* ==========================================================================
+   DB9 STMPE OLED cards and tables: keep the layout, deepen the surfaces
+   ========================================================================== */
+
+.box,
+.box2,
+.forum_post,
+.filter_torrents,
+#discog_table > div.box.center,
+#ft_container.box.pad,
+.torrent_table,
+#dnulist,
+.table_container,
+.sidebar .box,
+.main_column .box {
+  border-color: rgba(185, 248, 255, 0.12) !important;
+  background:
+    linear-gradient(180deg, rgba(8, 13, 15, 0.96), rgba(0, 0, 0, 0.98)) !important;
+  box-shadow:
+    0 14px 34px rgba(0, 0, 0, 0.42),
+    inset 0 1px 0 rgba(185, 248, 255, 0.035) !important;
+  backdrop-filter: none;
+}
+
+.head,
+.colhead,
+.colhead_dark,
+tr.colheadb_dark,
+table .colhead,
+table .colhead_dark {
+  color: var(--tb9-text-strong) !important;
+  background:
+    linear-gradient(90deg, rgba(69, 223, 240, 0.10), rgba(4, 7, 8, 0.96) 34%, rgba(0, 0, 0, 0.98)) !important;
+  border-bottom: 1px solid rgba(185, 248, 255, 0.14) !important;
+  text-shadow: none !important;
+}
+
+.head {
+  position: relative;
+  overflow: hidden;
+}
+
+.head::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 4px;
+  background: linear-gradient(180deg, var(--tb9-cyan-bright), var(--tb9-cyan-deep));
+  opacity: 0.8;
+}
+
+.head a,
+.colhead a,
+.colhead_dark a {
+  color: var(--tb9-text-strong) !important;
+}
+
+table,
+.box table:not(.layout),
+.box2 table:not(.layout),
+.torrent_table {
+  border-color: rgba(185, 248, 255, 0.10) !important;
+  background: #010303 !important;
+}
+
+td,
+th,
+.box table:not(.layout) td,
+.box table:not(.layout) th,
+.torrent_table td,
+.torrent_table th {
+  border-color: rgba(185, 248, 255, 0.075) !important;
+}
+
+table .rowa,
+table .rowb,
+.torrent_table tr:not(.colhead):not(.colhead_dark),
+#dnulist tr:not(.colhead):not(.colhead_dark) {
+  background-color: rgba(3, 6, 7, 0.92) !important;
+}
+
+table .rowa:nth-child(odd),
+table .rowb:nth-child(odd),
+#dnulist tr:not(.colhead):not(.colhead_dark):nth-child(odd),
+.torrent_table tr:not(.colhead):not(.colhead_dark):nth-child(odd) {
+  background-color: rgba(7, 12, 14, 0.92) !important;
+}
+
+table .rowa:nth-child(even),
+table .rowb:nth-child(even),
+#dnulist tr:not(.colhead):not(.colhead_dark):nth-child(even),
+.torrent_table tr:not(.colhead):not(.colhead_dark):nth-child(even) {
+  background-color: rgba(0, 0, 0, 0.94) !important;
+}
+
+tr:not(.colhead):not(.colhead_dark):hover,
+.torrent_table tr:not(.colhead):not(.colhead_dark):hover,
+.torrent_table .group:hover,
+.group_torrent:hover {
+  background:
+    linear-gradient(90deg, rgba(69, 223, 240, 0.08), rgba(4, 8, 9, 0.96)) !important;
+}
+
+.torrent_table .group,
+.group,
+.group_torrent,
+.group_torrent.edition,
+.torrent {
+  background-color: rgba(3, 6, 7, 0.94) !important;
+}
+
+.body,
+.pad,
+.box .pad,
+.box2 .pad {
+  background: transparent !important;
+}
+
+input,
+select,
+textarea {
+  color: var(--tb9-text) !important;
+  border-color: rgba(185, 248, 255, 0.14) !important;
+  background: #030506 !important;
+  box-shadow: none !important;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--tb9-cyan-line) !important;
+  box-shadow: 0 0 0 2px rgba(69, 223, 240, 0.11) !important;
+}
+
+/* ==========================================================================
+   DB9 STMPE header final pass: match the open tracker shell, not a card
+   ========================================================================== */
+
+#wrapper {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+#content,
+#content_wrapper {
+  width: 100%;
+  max-width: 1840px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#header {
+  position: relative !important;
+  z-index: 900;
+  display: flex !important;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100% !important;
+  max-width: none !important;
+  min-height: 0;
+  margin: 0 auto 18px !important;
+  padding: 22px clamp(16px, 3vw, 40px) 0 !important;
+  overflow: visible;
+  background:
+    radial-gradient(circle at 18% 0%, rgba(69, 223, 240, 0.045), transparent 360px),
+    linear-gradient(180deg, rgba(5, 8, 9, 0.40), rgba(0, 0, 0, 0.24)) !important;
+  border: 0 !important;
+  border-bottom: 1px solid rgba(185, 248, 255, 0.12) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+}
+
+#header::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -1px;
+  left: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(185, 248, 255, 0.30), transparent);
+}
+
+#logo {
+  top: 22px !important;
+  left: clamp(16px, 3vw, 40px) !important;
+}
+
+#userinfo {
+  min-height: 40px;
+  padding: 0 0 0 306px !important;
+}
+
+#donation_bar_text,
+#submenu {
+  right: clamp(16px, 3vw, 40px) !important;
+}
+
+#alerts {
+  right: clamp(16px, 3vw, 40px) !important;
+}
+
+#menu {
+  flex: 0 0 100% !important;
+  width: 100% !important;
+  max-width: none !important;
+  min-height: 48px;
+  margin: 26px 0 0 !important;
+  padding: 6px;
+  background:
+    linear-gradient(180deg, rgba(5, 8, 9, 0.46), rgba(0, 0, 0, 0.34)) !important;
+  border: 1px solid rgba(185, 248, 255, 0.16) !important;
+  border-radius: 12px;
+  box-shadow:
+    0 10px 28px rgba(0, 0, 0, 0.42),
+    inset 0 1px 0 rgba(185, 248, 255, 0.035) !important;
+}
+
+#searchbars {
+  flex: 0 0 100% !important;
+  width: 100% !important;
+  padding: 12px 0 22px !important;
+}
+
+#searchbars > ul {
+  width: 100% !important;
+  max-width: none !important;
+}
+
+/* ==========================================================================
+   DB9 STMPE animated starry sky: a subtle twinkling star field behind all
+   content. Pure CSS, no external assets, tinted to the cyan/white palette.
+   Two full-viewport fixed layers (body::before / ::after) give offset
+   twinkle plus a seamless slow drift (animated via background-position so it
+   loops with no gaps). Honours prefers-reduced-motion.
+   ========================================================================== */
+
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  /* Overhang top and bottom so the drift transform never exposes an edge. */
+  inset: -600px 0;
+  z-index: -1;
+  pointer-events: none;
+  background-repeat: repeat;
+  /* transform and opacity are the only two properties the compositor can
+     animate without repainting. Naming anything else here (background-position
+     was the previous value) pins a viewport-sized layer that then has to be
+     re-rastered every frame. */
+  will-change: transform, opacity;
+}
+
+/* Fine star dust: small solid-cored dots, 300px tile */
+body::before {
+  background-image:
+    radial-gradient(1.4px 1.4px at 15px 45px, rgba(255, 255, 255, 0.95) 0, rgba(255, 255, 255, 0.95) 55%, transparent 100%),
+    radial-gradient(1.3px 1.3px at 70px 120px, rgba(185, 248, 255, 0.80) 0, rgba(185, 248, 255, 0.80) 55%, transparent 100%),
+    radial-gradient(1.3px 1.3px at 130px 20px, rgba(255, 255, 255, 0.88) 0, rgba(255, 255, 255, 0.88) 55%, transparent 100%),
+    radial-gradient(1.2px 1.2px at 190px 200px, rgba(255, 255, 255, 0.78) 0, rgba(255, 255, 255, 0.78) 55%, transparent 100%),
+    radial-gradient(1.3px 1.3px at 250px 90px, rgba(185, 248, 255, 0.72) 0, rgba(185, 248, 255, 0.72) 55%, transparent 100%),
+    radial-gradient(1.3px 1.3px at 40px 250px, rgba(255, 255, 255, 0.82) 0, rgba(255, 255, 255, 0.82) 55%, transparent 100%),
+    radial-gradient(1.2px 1.2px at 220px 275px, rgba(255, 255, 255, 0.72) 0, rgba(255, 255, 255, 0.72) 55%, transparent 100%),
+    radial-gradient(1.2px 1.2px at 160px 150px, rgba(185, 248, 255, 0.66) 0, rgba(185, 248, 255, 0.66) 55%, transparent 100%),
+    radial-gradient(1.3px 1.3px at 95px 215px, rgba(255, 255, 255, 0.78) 0, rgba(255, 255, 255, 0.78) 55%, transparent 100%),
+    radial-gradient(1.2px 1.2px at 278px 178px, rgba(255, 255, 255, 0.72) 0, rgba(255, 255, 255, 0.72) 55%, transparent 100%),
+    radial-gradient(1.2px 1.2px at 10px 160px, rgba(185, 248, 255, 0.62) 0, rgba(185, 248, 255, 0.62) 55%, transparent 100%),
+    radial-gradient(1.3px 1.3px at 120px 292px, rgba(255, 255, 255, 0.72) 0, rgba(255, 255, 255, 0.72) 55%, transparent 100%);
+  background-size: 300px 300px;
+  opacity: 0.4;
+  animation: tb9-twinkle-a 7s ease-in-out infinite alternate,
+             tb9-drift-a 200s linear infinite;
+}
+
+/* Sparser, brighter stars with a soft glow halo, 500px tile */
+body::after {
+  background-image:
+    radial-gradient(2.1px 2.1px at 60px 80px, rgba(255, 255, 255, 1) 0, rgba(255, 255, 255, 1) 40%, rgba(185, 248, 255, 0.32) 70%, transparent 100%),
+    radial-gradient(2.1px 2.1px at 300px 150px, rgba(185, 248, 255, 0.96) 0, rgba(185, 248, 255, 0.96) 40%, rgba(69, 223, 240, 0.30) 70%, transparent 100%),
+    radial-gradient(1.9px 1.9px at 430px 60px, rgba(255, 255, 255, 0.92) 0, rgba(255, 255, 255, 0.92) 45%, transparent 100%),
+    radial-gradient(2.1px 2.1px at 200px 350px, rgba(185, 248, 255, 0.90) 0, rgba(185, 248, 255, 0.90) 40%, rgba(69, 223, 240, 0.28) 70%, transparent 100%),
+    radial-gradient(1.9px 1.9px at 455px 420px, rgba(255, 255, 255, 0.92) 0, rgba(255, 255, 255, 0.92) 45%, transparent 100%),
+    radial-gradient(2px 2px at 120px 470px, rgba(255, 255, 255, 0.90) 0, rgba(255, 255, 255, 0.90) 45%, transparent 100%),
+    radial-gradient(2.1px 2.1px at 380px 300px, rgba(69, 223, 240, 0.86) 0, rgba(69, 223, 240, 0.86) 40%, rgba(69, 223, 240, 0.24) 70%, transparent 100%),
+    radial-gradient(1.9px 1.9px at 30px 400px, rgba(255, 255, 255, 0.88) 0, rgba(255, 255, 255, 0.88) 45%, transparent 100%);
+  background-size: 500px 500px;
+  opacity: 0.45;
+  animation: tb9-twinkle-b 5.5s ease-in-out infinite alternate,
+             tb9-drift-b 300s linear infinite;
+}
+
+@keyframes tb9-twinkle-a {
+  from { opacity: 0.26; }
+  to   { opacity: 0.48; }
+}
+
+@keyframes tb9-twinkle-b {
+  from { opacity: 0.28; }
+  to   { opacity: 0.52; }
+}
+
+/* Seamless vertical drift: move the layer by exactly one tile height, so the
+   pattern at the end of the cycle is identical to the start. Animating
+   transform keeps this on the compositor; the old background-position version
+   forced a full-viewport repaint every frame, which showed up as the whole
+   header flickering once it became translucent over these layers. */
+@keyframes tb9-drift-a {
+  from { transform: translate3d(0, 0, 0); }
+  to   { transform: translate3d(0, -300px, 0); }
+}
+
+@keyframes tb9-drift-b {
+  from { transform: translate3d(0, 0, 0); }
+  to   { transform: translate3d(0, -500px, 0); }
+}
+
+/* --------------------------------------------------------------------------
+   Occasional bright flare. Two extra layers carry a handful of stars each,
+   spread over deliberately large tiles (1100px / 1500px) so only one or two
+   fall inside any given viewport. Each layer sits at a faint baseline and
+   spikes bright for a moment; the two periods (13s / 19s) do not divide into
+   one another and are offset by delays, so the flashes never line up and read
+   as individual stars flaring at random.
+   -------------------------------------------------------------------------- */
+
+html::before,
+html::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-repeat: repeat;
+  will-change: opacity;
+}
+
+html::before {
+  background-image:
+    radial-gradient(2.4px 2.4px at 180px 240px, rgba(255, 255, 255, 1) 0, rgba(255, 255, 255, 1) 38%, rgba(185, 248, 255, 0.34) 68%, transparent 100%),
+    radial-gradient(2.3px 2.3px at 760px 520px, rgba(185, 248, 255, 1) 0, rgba(185, 248, 255, 1) 38%, rgba(69, 223, 240, 0.32) 68%, transparent 100%),
+    radial-gradient(2.4px 2.4px at 420px 880px, rgba(255, 255, 255, 1) 0, rgba(255, 255, 255, 1) 38%, rgba(185, 248, 255, 0.30) 68%, transparent 100%);
+  background-size: 1100px 1100px;
+  opacity: 0.18;
+  animation: tb9-flare-a 13s ease-out infinite;
+}
+
+html::after {
+  background-image:
+    radial-gradient(2.4px 2.4px at 1120px 300px, rgba(255, 255, 255, 1) 0, rgba(255, 255, 255, 1) 38%, rgba(185, 248, 255, 0.34) 68%, transparent 100%),
+    radial-gradient(2.3px 2.3px at 300px 1180px, rgba(69, 223, 240, 1) 0, rgba(69, 223, 240, 1) 38%, rgba(69, 223, 240, 0.30) 68%, transparent 100%),
+    radial-gradient(2.4px 2.4px at 900px 960px, rgba(255, 255, 255, 1) 0, rgba(255, 255, 255, 1) 38%, rgba(185, 248, 255, 0.30) 68%, transparent 100%);
+  background-size: 1500px 1500px;
+  opacity: 0.18;
+  animation: tb9-flare-b 19s ease-out infinite 6s;
+}
+
+@keyframes tb9-flare-a {
+  0%, 84%, 100% { opacity: 0.18; }
+  89%           { opacity: 1; }
+  92%           { opacity: 0.24; }
+  95%           { opacity: 0.72; }
+}
+
+@keyframes tb9-flare-b {
+  0%, 78%, 100% { opacity: 0.16; }
+  83%           { opacity: 0.92; }
+  87%           { opacity: 0.2; }
+  91%           { opacity: 0.66; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body::before,
+  body::after,
+  html::before,
+  html::after {
+    animation: none;
+  }
+}
+
+/* ==========================================================================
+   DB9 STMPE header pass 2: put the whole user menu on one line and reduce it
+   to glyph buttons with tooltips.
+
+   Written against the live DB9 header, which differs from stock Gazelle in
+   three ways worth recording:
+     - #submenu is a <div> sibling of #userinfo inside #header (not a child of
+       it), and wraps its items in an inner <ul>.
+     - #userinfo holds only #welcometext, #welcomeusername, #userinfo_username
+       and #userinfo_stats. There is no #userinfo_major.
+     - The username lives in #welcomeusername, not #nav_userinfo.
+   ========================================================================== */
+
+/* --- One row across #header --------------------------------------------- */
+
+/* #userinfo was flex 0 0 100%, which forced #submenu onto its own line and
+   left it stranded top-left once it came out of its absolute position. Give
+   both an explicit order and let them share line one; margin-left auto on the
+   first pushes the pair right, clear of the absolutely positioned logo.
+   #donation_wrap stays in the line but measures 0x0 (its only visible child
+   is absolutely positioned), so it costs nothing. */
+#header > #donation_wrap {
+  order: 1;
+  flex: 0 0 auto !important;
+}
+
+#header > #submenu {
+  order: 2;
+  flex: 0 0 auto !important;
+  align-self: center;
+  margin-left: auto;
+}
+
+#header > #userinfo {
+  order: 3;
+  flex: 0 0 auto !important;
+  padding: 0 0 0 14px !important;
+}
+
+#header > #menu {
+  order: 4;
+}
+
+#header > #searchbars {
+  order: 5;
+}
+
+/* --- Unpack the two hover dropdowns -------------------------------------- */
+
+/* Both #submenu and #userinfo_username were absolutely positioned dropdowns
+   whose links were display:none until hover. Everything is inline now, so the
+   positioning, the carets and the dropdown chrome all come off. */
+#submenu,
+#submenu:hover {
+  position: static !important;
+  top: auto !important;
+  right: auto !important;
+  bottom: auto !important;
+  left: auto !important;
+  z-index: auto !important;
+  display: flex !important;
+  align-items: center;
+  width: auto !important;
+  max-width: none !important;
+  height: auto !important;
+  margin-top: 0 !important;
+  padding: 0;
+  overflow: visible;
+  background: transparent !important;
+  backdrop-filter: none !important;
+  pointer-events: auto;
+}
+
+/* The inner <ul> is the actual row; without this the <li>s stack vertically. */
+#submenu > ul {
+  display: flex !important;
+  flex-flow: row nowrap !important;
+  align-items: center;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#submenu > ul > li {
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  float: none !important;
+  background: transparent !important;
+  list-style: none;
+}
+
+#submenu::before,
+#submenu:hover::before,
+#userinfo_username::before {
+  display: none !important;
+  content: none !important;
+}
+
+#submenu a,
+#userinfo_username a {
+  display: inline-flex !important;
+  width: auto !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  line-height: 1 !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 9px !important;
+  box-shadow: none !important;
+}
+
+/* The original dropdown re-showed and re-decorated its links on hover, and
+   :first-of-type / :last-of-type match every link here because each <a> is the
+   only one in its <li>. Those selectors are (1,2,1), which outranks the (1,1,1)
+   glyph sizing below, so neutralise ONLY what they actually set. Never width:
+   sizing the buttons from a :hover rule collapses them the moment the pointer
+   enters the row, which drops :hover, restores them, and loops - the row
+   strobes and the masked ::before flashes as a bare square in a 0-width box. */
+#submenu:hover a,
+#submenu:hover a:first-of-type,
+#submenu:hover a:last-of-type {
+  display: inline-flex !important;
+  margin: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 9px !important;
+  box-shadow: none !important;
+}
+
+#userinfo {
+  flex-wrap: nowrap !important;
+  align-items: center;
+  justify-content: flex-end;
+  /* No gap: the glyph buttons must sit flush so sweeping the pointer along the
+     row never crosses a dead zone between them, which would strobe tooltips. */
+  gap: 0;
+  min-height: 36px;
+}
+
+#welcomeusername,
+ul#userinfo_username,
+#userinfo_stats {
+  position: static !important;
+  top: auto !important;
+  right: auto !important;
+  display: inline-flex !important;
+  flex: 0 0 auto;
+  flex-flow: row nowrap !important;
+  align-items: center;
+  gap: 0;
+  width: auto !important;
+  max-width: none !important;
+  margin: 0;
+  padding: 0;
+  overflow: visible;
+  background: transparent !important;
+}
+
+#userinfo_username > li {
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+}
+
+#userinfo_stats {
+  margin-left: 8px;
+}
+
+#userinfo_stats > li {
+  padding: 4px 6px !important;
+  font-size: 12px;
+}
+
+/* --- Glyph buttons -------------------------------------------------------- */
+
+#userinfo_username a[href*="inbox.php"],
+#submenu a[href*="inbox.php"],
+#userinfo_username a[href*="staffpm.php"],
+#submenu a[href*="staffpm.php"],
+#userinfo_username a[href*="action=subscriptions"],
+#submenu a[href*="action=subscriptions"],
+#userinfo_username a[href*="action=notify"],
+#submenu a[href*="action=notify"],
+#userinfo_username a[href*="bookmarks.php"],
+#submenu a[href*="bookmarks.php"],
+#userinfo_username a[href*="friends.php"],
+#submenu a[href*="friends.php"],
+#userinfo_username a[href*="action=posts"],
+#submenu a[href*="action=posts"],
+#userinfo_username a[href*="comments.php"],
+#submenu a[href*="comments.php"],
+#userinfo_username a[href*="type=uploaded"],
+#submenu a[href*="type=uploaded"],
+#userinfo_username a[href*="better.php"],
+#submenu a[href*="better.php"],
+#userinfo_username a[href*="action=edit"],
+#submenu a[href*="action=edit"],
+#userinfo_username a[href*="action=next_class"],
+#submenu a[href*="action=next_class"],
+#userinfo_username a[href*="action=invite"],
+#submenu a[href*="action=invite"],
+#userinfo_username a[href*="logout.php"],
+#submenu a[href*="logout.php"] {
+  position: relative;
+  display: inline-flex !important;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  width: 32px !important;
+  height: 34px !important;
+  min-height: 0 !important;
+  padding: 0 !important;
+  border-radius: 9px !important;
+  color: var(--tb9-text-strong) !important;
+  /* Hides the link text but keeps it in the accessibility tree, so screen
+     readers still announce the real label. */
+  font-size: 0 !important;
+  line-height: 0 !important;
+  overflow: visible;
+}
+
+#userinfo_username a[href*="inbox.php"]:hover,
+#submenu a[href*="inbox.php"]:hover,
+#userinfo_username a[href*="staffpm.php"]:hover,
+#submenu a[href*="staffpm.php"]:hover,
+#userinfo_username a[href*="action=subscriptions"]:hover,
+#submenu a[href*="action=subscriptions"]:hover,
+#userinfo_username a[href*="action=notify"]:hover,
+#submenu a[href*="action=notify"]:hover,
+#userinfo_username a[href*="bookmarks.php"]:hover,
+#submenu a[href*="bookmarks.php"]:hover,
+#userinfo_username a[href*="friends.php"]:hover,
+#submenu a[href*="friends.php"]:hover,
+#userinfo_username a[href*="action=posts"]:hover,
+#submenu a[href*="action=posts"]:hover,
+#userinfo_username a[href*="comments.php"]:hover,
+#submenu a[href*="comments.php"]:hover,
+#userinfo_username a[href*="type=uploaded"]:hover,
+#submenu a[href*="type=uploaded"]:hover,
+#userinfo_username a[href*="better.php"]:hover,
+#submenu a[href*="better.php"]:hover,
+#userinfo_username a[href*="action=edit"]:hover,
+#submenu a[href*="action=edit"]:hover,
+#userinfo_username a[href*="action=next_class"]:hover,
+#submenu a[href*="action=next_class"]:hover,
+#userinfo_username a[href*="action=invite"]:hover,
+#submenu a[href*="action=invite"]:hover,
+#userinfo_username a[href*="logout.php"]:hover,
+#submenu a[href*="logout.php"]:hover,
+#userinfo_username a[href*="inbox.php"]:focus-visible,
+#submenu a[href*="inbox.php"]:focus-visible,
+#userinfo_username a[href*="staffpm.php"]:focus-visible,
+#submenu a[href*="staffpm.php"]:focus-visible,
+#userinfo_username a[href*="action=subscriptions"]:focus-visible,
+#submenu a[href*="action=subscriptions"]:focus-visible,
+#userinfo_username a[href*="action=notify"]:focus-visible,
+#submenu a[href*="action=notify"]:focus-visible,
+#userinfo_username a[href*="bookmarks.php"]:focus-visible,
+#submenu a[href*="bookmarks.php"]:focus-visible,
+#userinfo_username a[href*="friends.php"]:focus-visible,
+#submenu a[href*="friends.php"]:focus-visible,
+#userinfo_username a[href*="action=posts"]:focus-visible,
+#submenu a[href*="action=posts"]:focus-visible,
+#userinfo_username a[href*="comments.php"]:focus-visible,
+#submenu a[href*="comments.php"]:focus-visible,
+#userinfo_username a[href*="type=uploaded"]:focus-visible,
+#submenu a[href*="type=uploaded"]:focus-visible,
+#userinfo_username a[href*="better.php"]:focus-visible,
+#submenu a[href*="better.php"]:focus-visible,
+#userinfo_username a[href*="action=edit"]:focus-visible,
+#submenu a[href*="action=edit"]:focus-visible,
+#userinfo_username a[href*="action=next_class"]:focus-visible,
+#submenu a[href*="action=next_class"]:focus-visible,
+#userinfo_username a[href*="action=invite"]:focus-visible,
+#submenu a[href*="action=invite"]:focus-visible,
+#userinfo_username a[href*="logout.php"]:focus-visible,
+#submenu a[href*="logout.php"]:focus-visible {
+  color: var(--tb9-cyan-bright) !important;
+  background: var(--tb9-cyan-soft) !important;
+  box-shadow: inset 0 0 0 1px var(--tb9-cyan-line) !important;
+}
+
+/* The mark: an SVG mask filled with currentColor, so it picks up the hover
+   colour without needing a second coloured asset. */
+#userinfo_username a[href*="inbox.php"]::before,
+#submenu a[href*="inbox.php"]::before,
+#userinfo_username a[href*="staffpm.php"]::before,
+#submenu a[href*="staffpm.php"]::before,
+#userinfo_username a[href*="action=subscriptions"]::before,
+#submenu a[href*="action=subscriptions"]::before,
+#userinfo_username a[href*="action=notify"]::before,
+#submenu a[href*="action=notify"]::before,
+#userinfo_username a[href*="bookmarks.php"]::before,
+#submenu a[href*="bookmarks.php"]::before,
+#userinfo_username a[href*="friends.php"]::before,
+#submenu a[href*="friends.php"]::before,
+#userinfo_username a[href*="action=posts"]::before,
+#submenu a[href*="action=posts"]::before,
+#userinfo_username a[href*="comments.php"]::before,
+#submenu a[href*="comments.php"]::before,
+#userinfo_username a[href*="type=uploaded"]::before,
+#submenu a[href*="type=uploaded"]::before,
+#userinfo_username a[href*="better.php"]::before,
+#submenu a[href*="better.php"]::before,
+#userinfo_username a[href*="action=edit"]::before,
+#submenu a[href*="action=edit"]::before,
+#userinfo_username a[href*="action=next_class"]::before,
+#submenu a[href*="action=next_class"]::before,
+#userinfo_username a[href*="action=invite"]::before,
+#submenu a[href*="action=invite"]::before,
+#userinfo_username a[href*="logout.php"]::before,
+#submenu a[href*="logout.php"]::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 17px;
+  height: 17px;
+  margin: auto;
+  background-color: currentColor;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+          mask-position: center;
+  -webkit-mask-size: contain;
+          mask-size: contain;
+}
+
+#userinfo_username a[href*="inbox.php"]::before,
+#submenu a[href*="inbox.php"]::before {
+  -webkit-mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='2.5' y='5' width='19' height='14' rx='2'/><path d='m3 7 9 6 9-6'/></svg>");
+          mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='2.5' y='5' width='19' height='14' rx='2'/><path d='m3 7 9 6 9-6'/></svg>");
+}
+
+#userinfo_username a[href*="staffpm.php"]::before,
+#submenu a[href*="staffpm.php"]::before {
+  -webkit-mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='12' r='9'/><circle cx='12' cy='12' r='3.6'/><path d='m5.6 5.6 3.9 3.9M14.5 14.5l3.9 3.9M18.4 5.6l-3.9 3.9M9.5 14.5l-3.9 3.9'/></svg>");
+          mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='12' r='9'/><circle cx='12' cy='12' r='3.6'/><path d='m5.6 5.6 3.9 3.9M14.5 14.5l3.9 3.9M18.4 5.6l-3.9 3.9M9.5 14.5l-3.9 3.9'/></svg>");
+}
+
+#userinfo_username a[href*="action=subscriptions"]::before,
+#submenu a[href*="action=subscriptions"]::before {
+  -webkit-mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M4 11a9 9 0 0 1 9 9'/><path d='M4 4a16 16 0 0 1 16 16'/><circle cx='5' cy='19' r='1.4' fill='%23000'/></svg>");
+          mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M4 11a9 9 0 0 1 9 9'/><path d='M4 4a16 16 0 0 1 16 16'/><circle cx='5' cy='19' r='1.4' fill='%23000'/></svg>");
+}
+
+#userinfo_username a[href*="action=notify"]::before,
+#submenu a[href*="action=notify"]::before {
+  -webkit-mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M18 8a6 6 0 1 0-12 0c0 6-3 7-3 7h18s-3-1-3-7'/><path d='M13.7 19a2 2 0 0 1-3.4 0'/></svg>");
+          mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M18 8a6 6 0 1 0-12 0c0 6-3 7-3 7h18s-3-1-3-7'/><path d='M13.7 19a2 2 0 0 1-3.4 0'/></svg>");
+}
+
+#userinfo_username a[href*="bookmarks.php"]::before,
+#submenu a[href*="bookmarks.php"]::before {
+  -webkit-mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z'/></svg>");
+          mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z'/></svg>");
+}
+
+#userinfo_username a[href*="friends.php"]::before,
+#submenu a[href*="friends.php"]::before {
+  -webkit-mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2'/><circle cx='9' cy='7' r='4'/><path d='M22 21v-2a4 4 0 0 0-3-3.87'/><path d='M16 3.13a4 4 0 0 1 0 7.75'/></svg>");
+          mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2'/><circle cx='9' cy='7' r='4'/><path d='M22 21v-2a4 4 0 0 0-3-3.87'/><path d='M16 3.13a4 4 0 0 1 0 7.75'/></svg>");
+}
+
+#userinfo_username a[href*="action=posts"]::before,
+#submenu a[href*="action=posts"]::before {
+  -webkit-mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z'/><path d='M14 2v6h6M8 13h8M8 17h5'/></svg>");
+          mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z'/><path d='M14 2v6h6M8 13h8M8 17h5'/></svg>");
+}
+
+#userinfo_username a[href*="comments.php"]::before,
+#submenu a[href*="comments.php"]::before {
+  -webkit-mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M21 11.5a8.4 8.4 0 0 1-9 8.5 9.6 9.6 0 0 1-2.9-.4L3 21l1.4-4.1A8.4 8.4 0 0 1 12 3a8.4 8.4 0 0 1 9 8.5z'/></svg>");
+          mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M21 11.5a8.4 8.4 0 0 1-9 8.5 9.6 9.6 0 0 1-2.9-.4L3 21l1.4-4.1A8.4 8.4 0 0 1 12 3a8.4 8.4 0 0 1 9 8.5z'/></svg>");
+}
+
+#userinfo_username a[href*="type=uploaded"]::before,
+#submenu a[href*="type=uploaded"]::before {
+  -webkit-mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z'/></svg>");
+          mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z'/></svg>");
+}
+
+#userinfo_username a[href*="better.php"]::before,
+#submenu a[href*="better.php"]::before {
+  -webkit-mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='12' r='9'/><path d='m8 12 4-4 4 4M12 8v8'/></svg>");
+          mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='12' r='9'/><path d='m8 12 4-4 4 4M12 8v8'/></svg>");
+}
+
+#userinfo_username a[href*="action=edit"]::before,
+#submenu a[href*="action=edit"]::before {
+  -webkit-mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6'/></svg>");
+          mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6'/></svg>");
+}
+
+#userinfo_username a[href*="action=next_class"]::before,
+#submenu a[href*="action=next_class"]::before {
+  -webkit-mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M3 3v18h18'/><path d='m7 14 4-4 3 3 5-6'/></svg>");
+          mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M3 3v18h18'/><path d='m7 14 4-4 3 3 5-6'/></svg>");
+}
+
+#userinfo_username a[href*="action=invite"]::before,
+#submenu a[href*="action=invite"]::before {
+  -webkit-mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2'/><circle cx='9' cy='7' r='4'/><path d='M19 8v6M22 11h-6'/></svg>");
+          mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2'/><circle cx='9' cy='7' r='4'/><path d='M19 8v6M22 11h-6'/></svg>");
+}
+
+#userinfo_username a[href*="logout.php"]::before,
+#submenu a[href*="logout.php"]::before {
+  -webkit-mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4'/><path d='m16 17 5-5-5-5'/><path d='M21 12H9'/></svg>");
+          mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4'/><path d='m16 17 5-5-5-5'/><path d='M21 12H9'/></svg>");
+}
+
+/* --- Tooltips ------------------------------------------------------------- */
+
+/* The button sets font-size 0 to hide the link text, so the tooltip restates
+   its own size. */
+#userinfo_username a[href*="inbox.php"]::after,
+#submenu a[href*="inbox.php"]::after,
+#userinfo_username a[href*="staffpm.php"]::after,
+#submenu a[href*="staffpm.php"]::after,
+#userinfo_username a[href*="action=subscriptions"]::after,
+#submenu a[href*="action=subscriptions"]::after,
+#userinfo_username a[href*="action=notify"]::after,
+#submenu a[href*="action=notify"]::after,
+#userinfo_username a[href*="bookmarks.php"]::after,
+#submenu a[href*="bookmarks.php"]::after,
+#userinfo_username a[href*="friends.php"]::after,
+#submenu a[href*="friends.php"]::after,
+#userinfo_username a[href*="action=posts"]::after,
+#submenu a[href*="action=posts"]::after,
+#userinfo_username a[href*="comments.php"]::after,
+#submenu a[href*="comments.php"]::after,
+#userinfo_username a[href*="type=uploaded"]::after,
+#submenu a[href*="type=uploaded"]::after,
+#userinfo_username a[href*="better.php"]::after,
+#submenu a[href*="better.php"]::after,
+#userinfo_username a[href*="action=edit"]::after,
+#submenu a[href*="action=edit"]::after,
+#userinfo_username a[href*="action=next_class"]::after,
+#submenu a[href*="action=next_class"]::after,
+#userinfo_username a[href*="action=invite"]::after,
+#submenu a[href*="action=invite"]::after,
+#userinfo_username a[href*="logout.php"]::after,
+#submenu a[href*="logout.php"]::after {
+  position: absolute;
+  top: calc(100% + 7px);
+  left: 50%;
+  z-index: 14000;
+  transform: translateX(-50%);
+  padding: 5px 9px;
+  color: var(--tb9-text-strong);
+  background: rgba(6, 10, 12, 0.98);
+  border: 1px solid var(--tb9-cyan-line);
+  border-radius: 7px;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.5);
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  /* Hides straight away on leave; the show delay lives on :hover below, so
+     sweeping along the row does not strobe a tooltip under every glyph. */
+  transition: opacity 0.12s ease 0s, visibility 0s linear 0.12s;
+}
+
+#userinfo_username a[href*="inbox.php"]:hover::after,
+#submenu a[href*="inbox.php"]:hover::after,
+#userinfo_username a[href*="staffpm.php"]:hover::after,
+#submenu a[href*="staffpm.php"]:hover::after,
+#userinfo_username a[href*="action=subscriptions"]:hover::after,
+#submenu a[href*="action=subscriptions"]:hover::after,
+#userinfo_username a[href*="action=notify"]:hover::after,
+#submenu a[href*="action=notify"]:hover::after,
+#userinfo_username a[href*="bookmarks.php"]:hover::after,
+#submenu a[href*="bookmarks.php"]:hover::after,
+#userinfo_username a[href*="friends.php"]:hover::after,
+#submenu a[href*="friends.php"]:hover::after,
+#userinfo_username a[href*="action=posts"]:hover::after,
+#submenu a[href*="action=posts"]:hover::after,
+#userinfo_username a[href*="comments.php"]:hover::after,
+#submenu a[href*="comments.php"]:hover::after,
+#userinfo_username a[href*="type=uploaded"]:hover::after,
+#submenu a[href*="type=uploaded"]:hover::after,
+#userinfo_username a[href*="better.php"]:hover::after,
+#submenu a[href*="better.php"]:hover::after,
+#userinfo_username a[href*="action=edit"]:hover::after,
+#submenu a[href*="action=edit"]:hover::after,
+#userinfo_username a[href*="action=next_class"]:hover::after,
+#submenu a[href*="action=next_class"]:hover::after,
+#userinfo_username a[href*="action=invite"]:hover::after,
+#submenu a[href*="action=invite"]:hover::after,
+#userinfo_username a[href*="logout.php"]:hover::after,
+#submenu a[href*="logout.php"]:hover::after,
+#userinfo_username a[href*="inbox.php"]:focus-visible::after,
+#submenu a[href*="inbox.php"]:focus-visible::after,
+#userinfo_username a[href*="staffpm.php"]:focus-visible::after,
+#submenu a[href*="staffpm.php"]:focus-visible::after,
+#userinfo_username a[href*="action=subscriptions"]:focus-visible::after,
+#submenu a[href*="action=subscriptions"]:focus-visible::after,
+#userinfo_username a[href*="action=notify"]:focus-visible::after,
+#submenu a[href*="action=notify"]:focus-visible::after,
+#userinfo_username a[href*="bookmarks.php"]:focus-visible::after,
+#submenu a[href*="bookmarks.php"]:focus-visible::after,
+#userinfo_username a[href*="friends.php"]:focus-visible::after,
+#submenu a[href*="friends.php"]:focus-visible::after,
+#userinfo_username a[href*="action=posts"]:focus-visible::after,
+#submenu a[href*="action=posts"]:focus-visible::after,
+#userinfo_username a[href*="comments.php"]:focus-visible::after,
+#submenu a[href*="comments.php"]:focus-visible::after,
+#userinfo_username a[href*="type=uploaded"]:focus-visible::after,
+#submenu a[href*="type=uploaded"]:focus-visible::after,
+#userinfo_username a[href*="better.php"]:focus-visible::after,
+#submenu a[href*="better.php"]:focus-visible::after,
+#userinfo_username a[href*="action=edit"]:focus-visible::after,
+#submenu a[href*="action=edit"]:focus-visible::after,
+#userinfo_username a[href*="action=next_class"]:focus-visible::after,
+#submenu a[href*="action=next_class"]:focus-visible::after,
+#userinfo_username a[href*="action=invite"]:focus-visible::after,
+#submenu a[href*="action=invite"]:focus-visible::after,
+#userinfo_username a[href*="logout.php"]:focus-visible::after,
+#submenu a[href*="logout.php"]:focus-visible::after {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.12s ease 0.35s, visibility 0s linear 0.35s;
+}
+
+#userinfo_username a[href*="inbox.php"]::after,
+#submenu a[href*="inbox.php"]::after { content: "Inbox"; }
+#userinfo_username a[href*="staffpm.php"]::after,
+#submenu a[href*="staffpm.php"]::after { content: "Staff Inbox"; }
+#userinfo_username a[href*="action=subscriptions"]::after,
+#submenu a[href*="action=subscriptions"]::after { content: "Subscriptions"; }
+#userinfo_username a[href*="action=notify"]::after,
+#submenu a[href*="action=notify"]::after { content: "Notifications"; }
+#userinfo_username a[href*="bookmarks.php"]::after,
+#submenu a[href*="bookmarks.php"]::after { content: "Bookmarks"; }
+#userinfo_username a[href*="friends.php"]::after,
+#submenu a[href*="friends.php"]::after { content: "Friends"; }
+#userinfo_username a[href*="action=posts"]::after,
+#submenu a[href*="action=posts"]::after { content: "Posts"; }
+#userinfo_username a[href*="comments.php"]::after,
+#submenu a[href*="comments.php"]::after { content: "Comments"; }
+#userinfo_username a[href*="type=uploaded"]::after,
+#submenu a[href*="type=uploaded"]::after { content: "My torrents"; }
+#userinfo_username a[href*="better.php"]::after,
+#submenu a[href*="better.php"]::after { content: "Better"; }
+#userinfo_username a[href*="action=edit"]::after,
+#submenu a[href*="action=edit"]::after { content: "Settings"; }
+#userinfo_username a[href*="action=next_class"]::after,
+#submenu a[href*="action=next_class"]::after { content: "Next class"; }
+#userinfo_username a[href*="action=invite"]::after,
+#submenu a[href*="action=invite"]::after { content: "Invite"; }
+#userinfo_username a[href*="logout.php"]::after,
+#submenu a[href*="logout.php"]::after { content: "Log out"; }
+
+@media (prefers-reduced-motion: reduce) {
+  #userinfo_username a[href*="inbox.php"]::after,
+  #submenu a[href*="inbox.php"]::after,
+  #userinfo_username a[href*="staffpm.php"]::after,
+  #submenu a[href*="staffpm.php"]::after,
+  #userinfo_username a[href*="action=subscriptions"]::after,
+  #submenu a[href*="action=subscriptions"]::after,
+  #userinfo_username a[href*="action=notify"]::after,
+  #submenu a[href*="action=notify"]::after,
+  #userinfo_username a[href*="bookmarks.php"]::after,
+  #submenu a[href*="bookmarks.php"]::after,
+  #userinfo_username a[href*="friends.php"]::after,
+  #submenu a[href*="friends.php"]::after,
+  #userinfo_username a[href*="action=posts"]::after,
+  #submenu a[href*="action=posts"]::after,
+  #userinfo_username a[href*="comments.php"]::after,
+  #submenu a[href*="comments.php"]::after,
+  #userinfo_username a[href*="type=uploaded"]::after,
+  #submenu a[href*="type=uploaded"]::after,
+  #userinfo_username a[href*="better.php"]::after,
+  #submenu a[href*="better.php"]::after,
+  #userinfo_username a[href*="action=edit"]::after,
+  #submenu a[href*="action=edit"]::after,
+  #userinfo_username a[href*="action=next_class"]::after,
+  #submenu a[href*="action=next_class"]::after,
+  #userinfo_username a[href*="action=invite"]::after,
+  #submenu a[href*="action=invite"]::after,
+  #userinfo_username a[href*="logout.php"]::after,
+  #submenu a[href*="logout.php"]::after {
+    /* Drop the fade but keep the dwell: the delay is what stops the flicker. */
+    transition: opacity 0s linear 0.35s, visibility 0s linear 0.35s;
+  }
+}
+
+@media (max-width: 980px) {
+  #header > #submenu {
+    margin-left: 0;
+    flex: 1 1 100% !important;
+  }
+
+  #header > #submenu > ul {
+    flex-wrap: wrap !important;
+    justify-content: flex-start;
+  }
+
+  #userinfo {
+    flex-wrap: wrap !important;
+    justify-content: flex-start;
+  }
+}

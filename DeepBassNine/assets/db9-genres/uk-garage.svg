@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="152" height="75" viewBox="0 0 152 75" role="img" aria-label="UK Garage">
+  <rect width="152" height="75" fill="#101113"/>
+  <path d="M-8 56c19-20 33 8 48-12 17-22 28-22 46 0 17 21 35-7 73 4v27H-8z" fill="#f2bb63" opacity=".18"/>
+  <path d="M17 49l13-21 16 23 15-14 18 14 14-23 18 25 22-17" fill="none" stroke="#f2bb63" stroke-width="2" stroke-opacity=".5"/>
+  <path d="M19 18h114M19 58h114" stroke="#fff" stroke-opacity=".11"/>
+  <text x="12" y="45" fill="#f7f8fb" font-family="Open Sans,Arial,sans-serif" font-size="13" font-weight="800" letter-spacing=".7">UK GARAGE</text>
+</svg>
